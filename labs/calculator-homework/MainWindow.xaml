@@ -25,43 +25,41 @@
         
         <!-- Number Buttons -->
 
-        <Button Grid.Row="2" Grid.Column="0">7</Button>
-        <Button Grid.Row="2" Grid.Column="1">8</Button>
-        <Button Grid.Row="2" Grid.Column="2">9</Button>
+        <Button x:Name="Button7" Grid.Row="2" Grid.Column="0" Click="Button7_Click">7</Button>
+        <Button x:Name="Button8" Grid.Row="2" Grid.Column="1" Click="Button8_Click">8</Button>
+        <Button x:Name="Button9" Grid.Row="2" Grid.Column="2" Click="Button9_Click">9</Button>
 
-        <Button Grid.Row="3" Grid.Column="0">4</Button>
-        <Button Grid.Row="3" Grid.Column="1">5</Button>
-        <Button Grid.Row="3" Grid.Column="2">6</Button>
+        <Button x:Name="Button4" Grid.Row="3" Grid.Column="0" Click="Button4_Click">4</Button>
+        <Button x:Name="Button5" Grid.Row="3" Grid.Column="1" Click="Button5_Click">5</Button>
+        <Button x:Name="Button6" Grid.Row="3" Grid.Column="2" Click="Button6_Click">6</Button>
 
-        <Button Grid.Row="4" Grid.Column="0">3</Button>
-        <Button Grid.Row="4" Grid.Column="1">2</Button>
-        <Button Grid.Row="4" Grid.Column="2">1</Button>
+        <Button x:Name="Button3" Grid.Row="4" Grid.Column="0" Click="Button3_Click">3</Button>
+        <Button x:Name="Button2" Grid.Row="4" Grid.Column="1" Click="Button2_Click">2</Button>
+        <Button x:Name="Button1" Grid.Row="4" Grid.Column="2" Click="Button1_Click">1</Button>
 
-        <Button Grid.Row="5" Grid.Column="1">0</Button>
+        <Button x:Name="Button0" Grid.Row="5" Grid.Column="1" Click="Button0_Click">0</Button>
         
         <!-- Maths Buttons-->
 
-        <Button Grid.Row="1" Grid.Column="3">+</Button>
-        <Button Grid.Row="2" Grid.Column="3">-</Button>
-        <Button Grid.Row="3" Grid.Column="3">*</Button>
-        <Button Grid.Row="4" Grid.Column="3">/</Button>
-        <Button Grid.Row="5" Grid.Column="3">=</Button>
+        <Button x:Name="Plus" Grid.Row="1" Grid.Column="3">+</Button>
+        <Button x:Name="Minus" Grid.Row="2" Grid.Column="3">-</Button>
+        <Button x:Name="Multiply" Grid.Row="3" Grid.Column="3">*</Button>
+        <Button x:Name="Divide" Grid.Row="4" Grid.Column="3">/</Button>
+        <Button x:Name="Equals" Grid.Row="5" Grid.Column="3">=</Button>
         
         <!-- Clear Buttons-->
 
-        <Button Grid.Row="1" Grid.Column="0">CE</Button>
-        <Button Grid.Row="1" Grid.Column="1">C</Button>
-        <Button Grid.Row="1" Grid.Column="2" Content="&lt;="></Button>
+        <Button x:Name="ClearEntry"  Grid.Row="1" Grid.Column="0">CE</Button>
+        <Button x:Name="Clear" Grid.Row="1" Grid.Column="1">C</Button>
+        <Button x:Name="Backspace" Grid.Row="1" Grid.Column="2" Content="&lt;="></Button>
         
         <!-- Positive and negative-->
 
-        <Button Grid.Row="5" Grid.Column="0">+=</Button>
+        <Button x:Name="PositiveNegative" Grid.Row="5" Grid.Column="0">+=</Button>
         
         <!-- Display Text Box-->
-        <TextBox IsReadOnly="True" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+        <TextBox x:Name="NumberDisplay" IsReadOnly="True" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
                  TextAlignment="Right" VerticalAlignment="Bottom" FontSize="30" BorderThickness="0">0</TextBox>
         
-
-
     </Grid>
 </Window>
