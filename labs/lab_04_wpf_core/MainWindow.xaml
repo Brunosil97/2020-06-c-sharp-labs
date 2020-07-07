@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab_04_wpf_core"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="450" Width="800" FontSize="35">
+    <Grid Background="#eb4034">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label x:Name="LabelHeader" Content="Calculator" FontWeight="Bold"
+               Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center" Background="#eb5934"/>
+        <Button x:Name="Button01" Grid.Column="2" Grid.Row="2" Background="#36382a" Content="1" 
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                Click="Button01_Click"/>
+        <Button x:Name="Button02" Grid.Column="3" Grid.Row="2" Background="#36382a" Content="2" 
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button02_Click"/>
+        <Button x:Name="Button03" Grid.Column="4" Grid.Row="2" Background="#36382a" Content="3" 
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button03_Click"/>
+        <Label x:Name="LabelDisplay" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" 
+               Content="0" HorizontalContentAlignment="Right" Padding="0, 0, 35, 0" Background="White"/>
+        <Button x:Name="ButtonPlus" Grid.Column="5" Grid.Row="3" Background="#36382a" Content="+" 
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonPlus_Click"/>
+        <Button x:Name="ButtonEquals" Grid.Column="5" Grid.Row="4" Background="#36382a" Content="=" 
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                Click="ButtonEquals_Click" MouseDoubleClick="ButtonEquals_MouseDoubleClick"/>
     </Grid>
 </Window>
