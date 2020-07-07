@@ -28,6 +28,16 @@ namespace lab_06_mvc.Controllers
             return View();
         }
 
+        public IActionResult page3()
+        {
+            return View();
+        }
+
+        public IActionResult page4()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
