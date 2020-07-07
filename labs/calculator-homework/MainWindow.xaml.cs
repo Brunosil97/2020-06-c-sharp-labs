@@ -169,5 +169,70 @@ namespace calculator_homework
                 NumberDisplay.Text = number2.ToString();
             }
         }
+
+        private void Plus_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "+";
+            NumberDisplay.Text = "0";
+        }
+
+        private void Minus_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "-";
+            NumberDisplay.Text = "0";
+        }
+
+        private void Multiply_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "*";
+            NumberDisplay.Text = "0";
+        }
+
+        private void Divide_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "/";
+            NumberDisplay.Text = "0";
+        }
+
+        private void Equals_Click(object sender, RoutedEventArgs e)
+        {
+            switch(operation)
+            {
+                case "+":
+                    NumberDisplay.Text = (number1 + number2).ToString();
+                    break;
+                case "-":
+                    NumberDisplay.Text = (number1 - number2).ToString();
+                    break;
+                case "*":
+                    NumberDisplay.Text = (number1 * number2).ToString();
+                    break;
+                case "/":
+                    NumberDisplay.Text = (number1 / number2).ToString();
+                    break;
+
+            }
+        }
+
+        private void ClearEntry_Click(object sender, RoutedEventArgs e)
+        {
+            if(operation == "")
+            {
+                number1 = 0;
+            }
+            else
+            {
+                number2 = 0;
+            }
+            NumberDisplay.Text = "0";
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            number1 = 0;
+            number2 = 0;
+            operation = "";
+            NumberDisplay.Text = "0";
+        }
     }
 }

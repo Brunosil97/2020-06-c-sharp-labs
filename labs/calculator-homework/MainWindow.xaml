@@ -41,16 +41,16 @@
         
         <!-- Maths Buttons-->
 
-        <Button x:Name="Plus" Grid.Row="1" Grid.Column="3">+</Button>
-        <Button x:Name="Minus" Grid.Row="2" Grid.Column="3">-</Button>
-        <Button x:Name="Multiply" Grid.Row="3" Grid.Column="3">*</Button>
-        <Button x:Name="Divide" Grid.Row="4" Grid.Column="3">/</Button>
-        <Button x:Name="Equals" Grid.Row="5" Grid.Column="3">=</Button>
+        <Button x:Name="Plus" Grid.Row="1" Grid.Column="3" Click="Plus_Click">+</Button>
+        <Button x:Name="Minus" Grid.Row="2" Grid.Column="3" Click="Minus_Click">-</Button>
+        <Button x:Name="Multiply" Grid.Row="3" Grid.Column="3" Click="Multiply_Click">*</Button>
+        <Button x:Name="Divide" Grid.Row="4" Grid.Column="3" Click="Divide_Click">/</Button>
+        <Button x:Name="Equals" Grid.Row="5" Grid.Column="3" Click="Equals_Click">=</Button>
         
         <!-- Clear Buttons-->
 
-        <Button x:Name="ClearEntry"  Grid.Row="1" Grid.Column="0">CE</Button>
-        <Button x:Name="Clear" Grid.Row="1" Grid.Column="1">C</Button>
+        <Button x:Name="ClearEntry"  Grid.Row="1" Grid.Column="0" Click="ClearEntry_Click">CE</Button>
+        <Button x:Name="Clear" Grid.Row="1" Grid.Column="1" Click="Clear_Click">C</Button>
         <Button x:Name="Backspace" Grid.Row="1" Grid.Column="2" Content="&lt;="></Button>
         
         <!-- Positive and negative-->
