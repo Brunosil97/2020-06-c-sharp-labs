@@ -1,6 +1,6 @@
 ﻿#define RUNNINGTEST01
 using System;
-
+using System.Diagnostics;
 
 namespace lab_03_dot_net_core_hello_world
 {
@@ -37,6 +37,17 @@ namespace lab_03_dot_net_core_hello_world
 #if RUNNINGTEST01
             Console.WriteLine("Running test01" );
 #endif
+
+            //Debugging
+            Debug.WriteLine("outputting debug output");
+
+            //logging
+            Trace.WriteLine("outputting trace output");
+
+            //Console
+            Console.WriteLine("output to console");
+
+            Console.ReadLine();
         }
     }
 }

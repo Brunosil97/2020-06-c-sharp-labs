@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_06_mvc", "lab_06_mvc\la
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calculator-homework", "calculator-homework\calculator-homework.csproj", "{F797DB4E-2C91-4D4D-A64A-C05647299B16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_09_logging", "lab_09_logging\lab_09_logging.csproj", "{7D96FECA-1B62-41B7-B930-EFF3568F76E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{F797DB4E-2C91-4D4D-A64A-C05647299B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F797DB4E-2C91-4D4D-A64A-C05647299B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F797DB4E-2C91-4D4D-A64A-C05647299B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D96FECA-1B62-41B7-B930-EFF3568F76E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D96FECA-1B62-41B7-B930-EFF3568F76E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D96FECA-1B62-41B7-B930-EFF3568F76E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D96FECA-1B62-41B7-B930-EFF3568F76E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
