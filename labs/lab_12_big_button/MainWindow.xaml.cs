@@ -12,8 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Xceed.Document.NET;
-using Xceed.Words.NET;
 using System.Diagnostics;
 
 namespace lab_12_big_button
@@ -30,7 +28,11 @@ namespace lab_12_big_button
 
         private void GoButton_Click(object sender, RoutedEventArgs e)
         {
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
 
+
+            stopwatch.Stop();
         }
     }
 }
