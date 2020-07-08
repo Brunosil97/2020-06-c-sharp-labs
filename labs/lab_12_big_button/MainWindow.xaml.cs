@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Diagnostics;
 using Xceed.Document.NET;
 using Xceed.Words.NET;
+using System.IO;
 
 namespace lab_12_big_button
 {
@@ -38,12 +39,18 @@ namespace lab_12_big_button
             string pathString = System.IO.Path.Combine(folderName, "textFolder");
             System.IO.Directory.CreateDirectory(pathString);
 
-            for(int i = 0; i <= 100; i++)
+            for (int i = 0; i <= 1000; i++)
             {
-                string fileName = System.IO.Path.GetRandomFileName();
-                pathString = System.IO.Path.Combine(pathString, fileName);
+                string pathFile = $@"C:\2020-06-labs\2020-06-c-sharp-labs\labs\lab_12_big_button\textFolder\textfile{i}.txt";
+
+                using (StreamWriter sw = File.CreateText(pathFile));
+                //if (!System.IO.File.Exists(pathString))
+                //{
+                //    string fileName = System.IO.Path.GetRandomFileName();
+                //    pathString = System.IO.Path.Combine(pathString, fileName);
+                //    System.IO.File.Create(pathString);
+                //}
             }
-            
             stopwatch.Stop();
 
             displayText.Text = $"This took: {stopwatch.Elapsed}s";
