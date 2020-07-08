@@ -18,6 +18,6 @@
         </Grid.RowDefinitions>
 
         <Button x:Name="GoButton" Grid.Column="0" Grid.Row="0" FontSize="50" Click="GoButton_Click">G0</Button>
-        <TextBlock x:Name="displayText" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" FontSize="55">T</TextBlock>
+        <TextBlock x:Name="displayText" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" FontSize="55"></TextBlock>
     </Grid>
 </Window>
