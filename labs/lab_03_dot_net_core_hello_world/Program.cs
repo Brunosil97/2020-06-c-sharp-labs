@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define RUNNINGTEST01
+using System;
+
 
 namespace lab_03_dot_net_core_hello_world
 {
@@ -6,6 +8,7 @@ namespace lab_03_dot_net_core_hello_world
     {
         static void Main(string[] args)
         {
+            #region maincodeblock
             Console.WriteLine("Hello World!");
             int[] myArray = {1,2,3,4};
             foreach(var item in myArray) {
@@ -13,10 +16,27 @@ namespace lab_03_dot_net_core_hello_world
         }
             int total = 0;
 
-            for(int i=0; i < 5000; i++)
+            #region subloop
+
+            for (int i=0; i < 5; i++)
             {
                 total += i;
             }
+            #endregion subloop
+
+
+            #endregion maincodeblock
+
+            //compile if the build is debug build
+
+#if DEBUG
+            Console.WriteLine("this is code only compiled in debug mode");
+
+#endif
+
+#if RUNNINGTEST01
+            Console.WriteLine("Running test01" );
+#endif
         }
     }
 }
