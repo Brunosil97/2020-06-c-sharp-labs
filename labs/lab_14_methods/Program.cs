@@ -9,29 +9,48 @@ namespace lab_14_methods
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            DoThis();
-            var output = StringMethod();
-            SquareNumber(x: 4, y: "This is a square method");
+            //Console.WriteLine("Hello World!");
+            //DoThis();
+            //var output = StringMethod();
+            //SquareNumber(x: 4, y: "This is a square method");
 
-            OrderPizza(true, true);
-            OrderPizza(banana: true, pepperoni: true, pineapple: false);
+            //OrderPizza(true, true);
+            //OrderPizza(banana: true, pepperoni: true, pineapple: false);
 
-            var results = ReturnTwothings(10, "Bruno", out bool isLarge);
-            Console.WriteLine(isLarge);
-            Console.WriteLine(results);
+            //var results = ReturnTwothings(10, "Bruno", out bool isLarge);
+            //Console.WriteLine(isLarge);
+            //Console.WriteLine(results);
 
-            var myTuple = (fName: "Bruno", lName: "Silva", age: 23);
-            Console.WriteLine(myTuple.lName);
+            //var myTuple = (fName: "Bruno", lName: "Silva", age: 23);
+            //Console.WriteLine(myTuple.lName);
 
-            var results2 = DoThisWithTuple(10, "Bruno");
-            Console.WriteLine(results2);
-            Console.WriteLine(results2.xsquare);
-            var (square, greaterThan10) = DoThisWithTuple(4, "silva");
-            Console.WriteLine(greaterThan10);
+            //var results2 = DoThisWithTuple(10, "Bruno");
+            //Console.WriteLine(results2);
+            //Console.WriteLine(results2.xsquare);
+            //var (square, greaterThan10) = DoThisWithTuple(4, "silva");
+            //Console.WriteLine(greaterThan10);
 
-            Console.WriteLine(Add(3, 4,3));
-            Console.WriteLine(Add(6,6));
+            //Console.WriteLine(Add(3, 4,3));
+            //Console.WriteLine(Add(6,6));
+
+            var tripleResult = TripleCalc(1, 1, 1, out int sum);
+            Console.WriteLine(tripleResult);
+            Console.WriteLine(sum);
+
+            var (sumTuple, product) = TripleCalc(1, 1, 2);
+            Console.WriteLine(sumTuple);
+            Console.WriteLine(product);
+        }
+
+        public static int TripleCalc(int a , int b, int c, out int sum)
+        {
+            sum = a + b + c;
+            return a * b * c;
+        }
+
+        public static (int sumTuple, int product) TripleCalc(int a, int b, int c)
+        {
+            return (a + b + c, a*b*c);
         }
 
         public static int Add(int a, int b)
