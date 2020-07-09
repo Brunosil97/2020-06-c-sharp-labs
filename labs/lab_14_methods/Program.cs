@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Data;
+using System.Diagnostics.SymbolStore;
+using System.Runtime.Versioning;
 
 namespace lab_14_methods
 {
@@ -10,11 +13,45 @@ namespace lab_14_methods
             DoThis();
             var output = StringMethod();
             SquareNumber(x: 4, y: "This is a square method");
-            OrderPizza(true,true);
+
+            OrderPizza(true, true);
             OrderPizza(banana: true, pepperoni: true, pineapple: false);
+
             var results = ReturnTwothings(10, "Bruno", out bool isLarge);
             Console.WriteLine(isLarge);
+            Console.WriteLine(results);
+
+            var myTuple = (fName: "Bruno", lName: "Silva", age: 23);
+            Console.WriteLine(myTuple.lName);
+
+            var results2 = DoThisWithTuple(10, "Bruno");
+            Console.WriteLine(results2);
+            Console.WriteLine(results2.xsquare);
+            var (square, greaterThan10) = DoThisWithTuple(4, "silva");
+            Console.WriteLine(greaterThan10);
+
+            Console.WriteLine(Add(3, 4,3));
+            Console.WriteLine(Add(6,6));
         }
+
+        public static int Add(int a, int b)
+        {
+            return a + b;
+        }
+
+        public static int Add(int a , int b, int c)
+        {
+            return a + b + c;
+        }
+
+        public static (int xsquare, bool y_more_10) DoThisWithTuple(int x, string y)
+        {
+            Console.WriteLine(y);
+            var z = (x > 10);
+
+            return (x * x, z);
+        }
+
 
         public static void DoThis()
         {
@@ -58,5 +95,6 @@ namespace lab_14_methods
             z = (x > 10);
             return x * x;
         }
+
     }
 }
