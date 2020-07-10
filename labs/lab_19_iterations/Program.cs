@@ -44,21 +44,42 @@ namespace lab_19_iterations
             while (counter < 10);
 
             int sum = 0;
-            for(int i = 0; i <= 100; i++)
+            for (int i = 0; i <= 100; i++)
             {
                 sum += i;
             }
             Console.WriteLine(sum);
 
             string egoNish = "NISH IS KING";
-            foreach(char letter in egoNish)
+            foreach (char letter in egoNish)
             {
                 Console.WriteLine(letter.ToString().ToLower());
             } //also like this 
-            for(int i = 0; 0 < egoNish.Length; i++)
+            for (int i = 0; 0 < egoNish.Length; i++)
             {
                 Console.WriteLine(egoNish.ToLower()[i]);
             }
+
+            //Breaking out of loops
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+                if(i == 5) //when condition is met we can break out of loop
+                {
+                    //break;
+                    continue; //continues through loop
+                }
+            }
+
+            //goto statements
+            //Console.WriteLine("Hello");
+            //goto a: //sends it to a, but will make next line unreachable
+            //Console.WriteLine("World");
+            //a:
+            //Console.WriteLine("and Eng-66");
+
+            //return statemens - we can permatuerly exit the method by executing a return statement
+            //and returning the required value
         }
     }
 }
