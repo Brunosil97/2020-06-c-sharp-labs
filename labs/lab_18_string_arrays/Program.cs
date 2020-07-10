@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace lab_18_string_arrays
 {
@@ -76,6 +77,29 @@ namespace lab_18_string_arrays
             var initials = myName.ToCharArray(1, 3); //starts at index 1 and ends at index 3
             Console.WriteLine(initials);
             Console.WriteLine(myName[1]); //gets r
+
+            string firstName = "Bruno";
+            string lastName = "Silva";
+            int age = 23;
+
+            var string1 = firstName + " " + lastName + " Age: " + age;
+            var string2 = $"{firstName} {lastName} Age: {age}";
+            Console.WriteLine(string1);
+            Console.WriteLine(string2);
+
+            string input = "33";
+            int input2 = Int32.Parse(input);
+            int sum = 1 + input2;
+            Console.WriteLine(sum);
+            //casting is telling that the object its something else without changing it. 
+            //Parsing is taking one type and changing it to a different type 
+
+            bool success = Int32.TryParse(input, out int input3); //will show true that it can parse
+            Console.WriteLine($"{success} & {input3}"); //shows true and 33
+
+            //String Builder
+            StringBuilder sb = new StringBuilder("Hello");
+            sb.Append("Hello Engineerng 66\nEspicially Nish");
         }
     }
         public class Array
