@@ -26,3 +26,4 @@ namespace SelectionExercisesTests
             Assert.IsFalse(result);
         }
     }
+}
