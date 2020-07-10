@@ -55,10 +55,10 @@ namespace lab_19_iterations
             {
                 Console.WriteLine(letter.ToString().ToLower());
             } //also like this 
-            for (int i = 0; 0 < egoNish.Length; i++)
-            {
-                Console.WriteLine(egoNish.ToLower()[i]);
-            }
+            //for (int i = 0; 0 < egoNish.Length; i++)
+            //{
+            //    Console.WriteLine(egoNish.ToLower()[i]);
+            //}
 
             //Breaking out of loops
             for (int i = 0; i < 10; i++)
@@ -80,6 +80,15 @@ namespace lab_19_iterations
 
             //return statemens - we can permatuerly exit the method by executing a return statement
             //and returning the required value
+
+            for(int i = 0; i <= 20; i++)
+            {
+                Console.WriteLine(i);
+                if(i % 15 == 0)
+                {
+                    break;
+                }
+            }
         }
     }
 }
