@@ -1,13 +1,14 @@
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using NUnit.Framework;
 using lab_15_unit_testing;
+using lab_17_selection;
 
 namespace lab_16_uni_tests_for_lab_15
 {
     public class Tests
     {
-        private int _result;
-        private int _sum;
+        //private int _result;
+        //private int _sum;
         [SetUp]
         public void Setup()
         {
@@ -16,9 +17,31 @@ namespace lab_16_uni_tests_for_lab_15
             //_sum = sum;
         }
 
+        //Lab 17 tests
+        [TestCase(100)]
+        [TestCase(75)]
+        public void Mark75AndOverDistinction(int mark)
+        {
+            var results = Selection.MarkGrade(mark);
+            Assert.AreEqual("Pass with Distinction", results);
+        }
+        [Test]
+        public void Mark40AndOverrPasses()
+        {
+            var result = Selection.PassFail(40);
+            Assert.AreEqual("Pass", result);
+        }
+
+        [Test]
+        public void Mark39AndUnderPasses()
+        {
+            var result = Selection.PassFail(39);
+            Assert.AreEqual("Fail", result);
+        }
+
+        //lab 15 tests
         //[Test]
         //public void ProductIsCorrect()
-
         //{ 
         //    //Assert - see if matches expected result
         //    Assert.AreEqual(80, _result);
@@ -31,10 +54,8 @@ namespace lab_16_uni_tests_for_lab_15
             var actual = Calculator.TripleCalc(a, b, c, out int sum);
             Assert.AreEqual(expected, actual);
         }
-
         //[Test]
         //public void SumIsCorrect()
-
         //{
         //    Assert.AreEqual(16, _sum);
         //}
