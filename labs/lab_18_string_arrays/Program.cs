@@ -99,7 +99,7 @@ namespace lab_18_string_arrays
 
             //String Builder
             StringBuilder sb = new StringBuilder("Hello");
-            sb.Append("Hello Engineerng 66\nEspicially Nish");
+            sb.Append(" Engineerng 66\nEspicially Nish");
         }
     }
         public class Array
