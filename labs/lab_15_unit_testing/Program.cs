@@ -23,5 +23,10 @@ namespace lab_15_unit_testing
         {
             return (a + b + c, a * b * c);
         }
+
+        public static double RaiseToPower(double x, double y, int p)
+        {
+            return Math.Pow((x * y), p);
+        }
     }
 }
