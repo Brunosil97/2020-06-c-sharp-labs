@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace IterationLib
 {
@@ -16,7 +17,8 @@ namespace IterationLib
         // returns the lowest number in the array nums
         public static int Lowest(int[] nums)
         {
-            return 0;
+            var ans = nums.Min();
+            return ans;
         }
 
         // returns the sum of all numbers between 1 and n inclusive that are divisible by either 2 or 5
