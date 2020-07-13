@@ -26,6 +26,23 @@ namespace lab_22_collections
 
             //declare a stack
             var myStack = new Stack<string>();
+
+            //add item to the top of the stack
+            myStack.Push("first stack");
+            myStack.Push("Second stack");
+            myStack.Push("Third stack");
+            myStack.Push("fourth stack");
+
+            //Pop removes the item that has just been added
+            myStack.Pop();
+            foreach(var item in myStack)
+            {
+                Console.WriteLine(item);
+            }
+
+            //Dictionary
+
+
         }
     }
 }
