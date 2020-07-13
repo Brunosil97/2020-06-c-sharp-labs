@@ -41,8 +41,27 @@ namespace lab_22_collections
             }
 
             //Dictionary
+            //declare a dictionary
+            var myDic = new Dictionary<int, string>(); //add the key and item 
 
+            //Add items into a dictionary is the same as adding in the list
+            myDic.Add(1, "Bruno");
+            myDic.Add(2, "Bryn");
+            myDic.Add(3, "Phil");
+            myDic.Add(4, "Nish");
 
+            //alternately 
+            //var personDic = new Dictionary<int, string>()
+            //{
+            //    {1, "Bruno" },
+            //    {2, "Nish" }
+            //};
+
+            myDic.TryAdd(1, "Bruno"); //this wont add because bruno already exists
+            foreach(var item in myDic)
+            {
+                Console.WriteLine($"Index is: {item.Key} and the name is {item.Value}");
+            }
         }
     }
 }
