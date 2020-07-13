@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 
 namespace lab_20_data_types_2
 {
@@ -69,6 +70,28 @@ namespace lab_20_data_types_2
 
             }
             Console.WriteLine($"Sunday as a Number is {(int)DayOfWeek.Sunday}");
+
+            int? item = null;
+            int totalCost = 0;
+            if (item != null)
+            {
+                totalCost = item.Value * 10;
+                Console.WriteLine(totalCost);
+            }
+
+            dynamic item2 = 100;
+            Console.WriteLine($"adding 10 to {item2} gives {item2+10}"); // gives 110
+            item2 = "Hello";
+            Console.WriteLine($"adding 10 to {item2} gives {item2 + 10}"); // gives Hello + 10
+
+            //random
+
+            var rng = new Random();
+            //var rngSeeded = new Random(42);
+            //var between1And10 = rngSeeded.Next(1, 11);
+            var between1And10 = rng.Next(1, 11);
+            Console.WriteLine(between1And10);
+
         }
 
         public enum Suit
