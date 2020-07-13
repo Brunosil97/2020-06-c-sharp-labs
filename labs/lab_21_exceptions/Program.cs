@@ -4,9 +4,6 @@ namespace lab_21_exceptions
 {
     class Program
     {
-        private static string[] _theBeatles = new string[] { "John", "Paul", "George", "Ringo" };
-
-
         static void Main(string[] args)
         {
             //AddBeatle(4, "Brian");
@@ -15,8 +12,24 @@ namespace lab_21_exceptions
             //try { int output = x / y; } catch (Exception e) { Console.WriteLine("An exception has occured"); }
             //finally { Console.WriteLine("But life goes on"); }
 
-            AddBeatle(4, "Brian"); 
+            Beatles.AddBeatle(4, "Brian"); 
+
+            //checked
+
+            checked
+            {
+                int three = 3;
+                int sum = int.MaxValue + three;
+                Console.WriteLine(sum);
+            }
         }
+
+
+       
+    }
+
+    public class Beatles
+    {
         //public static void AddBeatle(int pos, string name)
         //{
         //    //Add a try and catch method
@@ -37,15 +50,15 @@ namespace lab_21_exceptions
         //    }
         //}
 
+        private static string[] _theBeatles = new string[] { "John", "Paul", "George", "Ringo" };
+
         public static void AddBeatle(int pos, string name)
         {
-            if(pos < 0 || pos >= _theBeatles.Length)
+            if (pos < 0 || pos >= _theBeatles.Length)
             {
-                throw new ArgumentException($"The beatles do have a position {pos}");
+                throw new ArgumentException($"The Beatles do not have a position {pos}");
             }
             _theBeatles[pos] = name;
         }
-
-
     }
 }

@@ -2,7 +2,9 @@ using Microsoft.VisualStudio.TestPlatform.TestHost;
 using NUnit.Framework;
 using lab_15_unit_testing;
 using lab_17_selection;
+using lab_21_exceptions; 
 using System.Runtime.CompilerServices;
+using System;
 
 namespace lab_16_uni_tests_for_lab_15
 {
@@ -16,6 +18,15 @@ namespace lab_16_uni_tests_for_lab_15
             //arange and act - we get an actual result
             //_result = Calculator.TripleCalc(10, 2, 4, out int sum);
             //_sum = sum;
+        }
+
+        //Lab 21 testing
+
+        [TestCase(-1)]
+        public void TestForBeatles(int pos)
+        {
+            var ex = Assert.Throws<ArgumentException>(() => Beatles.AddBeatle(pos, "Brian"));
+            Assert.AreEqual($"The Beatles do not have a position {pos}", ex.Message, "Exception message not correct");
         }
 
         //RaiseToPower HW test
