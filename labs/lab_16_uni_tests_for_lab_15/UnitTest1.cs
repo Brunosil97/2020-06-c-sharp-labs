@@ -6,7 +6,7 @@ using lab_21_exceptions;
 using System.Runtime.CompilerServices;
 using System;
 
-namespace lab_16_uni_tests_for_lab_15
+namespace lab_16_uni_tests_for_labs
 {
     public class Tests
     {
