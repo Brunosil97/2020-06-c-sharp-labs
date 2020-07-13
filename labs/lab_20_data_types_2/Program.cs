@@ -44,10 +44,13 @@ namespace lab_20_data_types_2
             var tick = new TimeSpan(1);
             date3 = date3 + tick;
 
-            Suit theSuit = Suit.HEARTS;
-            int suit = (int)theSuit;
-            Console.WriteLine(suit);
-            theSuit = Suit.DIAMONDS;
+            //Suit theSuit = Suit.HEARTS;
+            //int suit = (int)theSuit;
+            //Console.WriteLine(suit);
+            //theSuit = Suit.DIAMONDS;
+
+            Suit theSuit = (Suit)2;
+            Console.WriteLine(theSuit); //will print diamonds
 
             switch (theSuit)
             {
@@ -65,12 +68,17 @@ namespace lab_20_data_types_2
                     break;
 
             }
-
+            Console.WriteLine($"Sunday as a Number is {(int)DayOfWeek.Sunday}");
         }
 
         public enum Suit
         {
             HEARTS, CLUBS, DIAMONDS, SPADES
+        }
+
+        public enum Days
+        {
+            Monday = 1, Tuesday, Wednesday, Thursday = 8, Friday, Saturday, Sunday
         }
     }
 }
