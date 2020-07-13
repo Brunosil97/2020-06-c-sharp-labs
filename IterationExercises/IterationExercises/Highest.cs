@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace IterationLib
 {
@@ -6,26 +7,65 @@ namespace IterationLib
     {
         public static int HighestWhileLoop(int[] nums)
         {
+            int i = 0;
+            int max = 0;
+            while (i < nums.Length)
+            {
+                if (nums[i] > max)
+                {
+                    max = nums[i];
+                   
+                }
+                i++;
+            }
+            return max;
             // this method should use a while loop
-            throw new NotImplementedException();
+
         }
 
         public static int HighestForLoop(int[] nums)
         {
-            // this method should use a for loop
-            throw new NotImplementedException();
+            int max = 0;
+            for(int i = 0; i < nums.Length; i++)
+            {
+                if(nums[i] > max)
+                {
+                    max = nums[i];
+                }
+            }
+            return max;
         }
 
         public static int HighestForEachLoop(int[] nums)
         {
+            int max = 0;
             // this method should use a for-each loop
-            throw new NotImplementedException();
+            foreach(int num in nums)
+            {
+                if (num > max)
+                {
+                    max = num;
+                }
+            }
+            return max;
         }
 
         public static int HighestDoWhileLoop(int[] nums)
         {
-            // this method should use a do-while loop
-            throw new NotImplementedException();
+            int i = 0;
+            int max = 0;
+            do
+            {
+                if (nums[i] > max)
+                {
+                    max = nums[i];
+
+                }
+                i++;
+            }
+            while (i < nums.Length);
+
+            return max;
         }
     }
 }
