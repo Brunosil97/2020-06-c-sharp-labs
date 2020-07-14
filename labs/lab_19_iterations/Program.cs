@@ -89,6 +89,61 @@ namespace lab_19_iterations
                     break;
                 }
             }
+            LoopHomeWork();
+        }
+        //- Create a loop that outputs the numbers 1 to 300 to the screen.
+        //-For every 100th number, have the program output your name, a greeting, or anything else you want to the screen.
+        //- Same as the one above, but for every 5th, 105th, 205th, etc number.
+        //- Count down from 50 to 0 and output the numbers to the screen.
+        //- Implement the four labs above in one file, but ask the user which option(1 - 4) is chosen, and run the appropriate task
+        public static void LoopHomeWork()
+        {
+            Console.Write("Type your first name: ");
+            string myFirstName;
+            myFirstName = Console.ReadLine();
+
+            Console.WriteLine("Enter a number between 1-4");
+            Console.WriteLine("1: Create a loop for 1 - 300");
+            Console.WriteLine("2: For every 100th number, output your name and a greeting");
+            Console.WriteLine("3: For every 5h, 105th, 205th output name and a greeting");
+            Console.WriteLine("4: Count down from 50 to 0");
+
+            int numInput = Convert.ToInt32(Console.ReadLine());
+ 
+            if (numInput == 1)
+            {
+                for(int i = 1; i < 301; i++)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            else if(numInput == 2)
+            {
+                for(int i = 1; i < 301; i++)
+                {
+                    if(i == 100 || i == 200 || i == 300)
+                    {
+                        Console.WriteLine($"Welcome to my loop, I'm {myFirstName}");
+                    }
+                }
+            }
+            else if(numInput == 3)
+            {
+                for (int i = 1; i < 301; i++)
+                {
+                    if (i == 5 || i == 105 || i == 205)
+                    {
+                        Console.WriteLine($"Welcome to my loop, I'm {myFirstName}");
+                    }
+                }
+            }
+            else if (numInput == 4)
+            {
+                for (int i = 50; i >= 0; i--)
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
     }
 }

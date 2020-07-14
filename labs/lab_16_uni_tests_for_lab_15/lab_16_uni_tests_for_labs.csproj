@@ -13,8 +13,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\calculator-homework\calculator-homework.csproj" />
+    <ProjectReference Include="..\Lab_01_hello_world\Lab_01_hello_world.csproj" />
+    <ProjectReference Include="..\lab_02_framework\lab_02_framework.csproj" />
+    <ProjectReference Include="..\lab_03_dot_net_core_hello_world\lab_03_dot_net_core_hello_world.csproj" />
+    <ProjectReference Include="..\lab_04_wpf_core\lab_04_wpf_core.csproj" />
+    <ProjectReference Include="..\lab_05_asp\lab_05_asp.csproj" />
+    <ProjectReference Include="..\lab_06_mvc\lab_06_mvc.csproj" />
+    <ProjectReference Include="..\lab_09_logging\lab_09_logging.csproj" />
+    <ProjectReference Include="..\lab_10_data_types\lab_10_data_types.csproj" />
+    <ProjectReference Include="..\lab_11_microsoft_word\lab_11_microsoft_word.csproj" />
+    <ProjectReference Include="..\lab_12_big_button\lab_12_big_button.csproj" />
+    <ProjectReference Include="..\lab_13_operators\lab_13_operators.csproj" />
+    <ProjectReference Include="..\lab_14_methods\lab_14_methods.csproj" />
     <ProjectReference Include="..\lab_15_unit_testing\lab_15_unit_testing.csproj" />
     <ProjectReference Include="..\lab_17_selection\lab_17_selection.csproj" />
+    <ProjectReference Include="..\lab_18_string_arrays\lab_18_string_arrays.csproj" />
+    <ProjectReference Include="..\lab_19_iterations\lab_19_iterations.csproj" />
+    <ProjectReference Include="..\lab_20_data_types_2\lab_20_data_types_2.csproj" />
+    <ProjectReference Include="..\lab_21_exceptions\lab_21_exceptions.csproj" />
   </ItemGroup>
 
 </Project>

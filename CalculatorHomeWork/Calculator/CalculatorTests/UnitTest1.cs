@@ -36,6 +36,9 @@ namespace CalculatorTests
 
         [TestCase(10, 2, 5)]
         [TestCase(20, 2, 10)]
+        //[TestCase(20, 0, 0)]
+        //change the test to handle divison by zero
+        //double? out? throw custom exception?
         public void TheNumbersDivide(int num1, int num2, int expected)
         {
             var actual = Calculator.Divide(num1, num2);
