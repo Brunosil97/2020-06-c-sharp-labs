@@ -38,7 +38,7 @@ namespace CollectionsExercisesLib
 
             for (int i = 0; i < myArray.Length; i++)
             {
-                myArray[i] = (int)reverser.Pop();
+                myArray[i] = reverser.Pop();
             }
             return myArray;
         }
