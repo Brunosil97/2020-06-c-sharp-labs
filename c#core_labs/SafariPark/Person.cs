@@ -11,9 +11,19 @@ namespace SafariPark
         private string _firstName; //only the class person can access
         private string _lastName;
 
+        //
+        //privat int _age
+
+        //public int Age 
+        //{
+        //    get { return _age; }
+        //    set { if (value >= 0) _age = value; }
+        //}
+
         public int Age { get; set; } //setting a property
 
         //create a constructor: has no return value but must have the same name as the class
+        //constructor is called when a new Person object is created
         public Person(string firstName, string lastName)
         {
             //setting the private variables to whatever the constructor receives as arguments
@@ -21,7 +31,7 @@ namespace SafariPark
             _lastName = lastName;
         }
 
-        public string GetFullName() //public method that can be accessed
+        public string GetFullName() //public method that can be accessed and gets name of an instance
         {
             return $"{_firstName} {_lastName}";
         }

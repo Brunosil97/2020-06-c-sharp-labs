@@ -6,7 +6,14 @@ namespace SafariPark
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //instantiating two objects from the Person class
+            Person bruno = new Person("Bruno", "Silva");
+            bruno.Age = 23;
+            Console.WriteLine($"Bruno is {bruno.Age}");
+            //Console.WriteLine(bruno.GetFullName());
+
+            //Person nish = new Person("Nish", "French");
+            //Console.WriteLine(bruno.GetFullName());
         }
     }
 }
