@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SafariPark
 {
-    class Person
+    public class Person
     {
         //attributes of the class
         private string _firstName; //only the class person can access
