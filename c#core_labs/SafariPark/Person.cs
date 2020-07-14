@@ -12,7 +12,7 @@ namespace SafariPark
         private string _lastName;
 
         //
-        //privat int _age
+        private int _age;
 
         //public int Age 
         //{
@@ -30,6 +30,14 @@ namespace SafariPark
             _firstName = firstName;
             _lastName = lastName;
         }
+
+        //overloading the constructor
+        //public Person(string firstName, string lastName, int aAge)
+        //{
+        //    _firstName = firstName;
+        //    _lastName = lastName;
+        //    _age = aAge;
+        //}
 
         public string GetFullName() //public method that can be accessed and gets name of an instance
         {

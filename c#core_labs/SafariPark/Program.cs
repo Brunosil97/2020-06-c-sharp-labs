@@ -13,7 +13,12 @@ namespace SafariPark
             //Console.WriteLine(bruno.GetFullName());
 
             //Person nish = new Person("Nish", "French");
-            //Console.WriteLine(bruno.GetFullName());
+            //Console.WriteLine(bruno.GetFullName
+
+            //overloading constructor instance
+            //Person luis = new Person("Luis", "Wolton", 23);
+            //Console.WriteLine(luis.Age);
         }
+
     }
 }
