@@ -8,7 +8,7 @@ namespace IterationLib
         public static int HighestWhileLoop(int[] nums)
         {
             int i = 0;
-            int max = 0;
+            int max = int.MinValue; // this makes it the lowest possible number
             while (i < nums.Length)
             {
                 if (nums[i] > max)

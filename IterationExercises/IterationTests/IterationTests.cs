@@ -20,7 +20,7 @@ namespace IterationTests
         [Test]
         public void HighestWhileLoopTest()
         {
-            int[] nums = { 10, 6, 22, 17, 3 };
+            int[] nums = { 10, 6, 22, 17, -3 };
             var result = Highest.HighestWhileLoop(nums);
             Assert.AreEqual(22, result);
         }
