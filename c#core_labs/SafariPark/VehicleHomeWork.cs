@@ -13,11 +13,11 @@ namespace SafariPark
         public int NumPassengers
         {
             get { return _numPassengers; }
-            set { if (value < _capacity || value >= 0) _numPassengers = value; }
+            set { if (value <= _capacity && value >= 0) _numPassengers = value; }
         }
         public int Position { get; private set; }
 
-        public Vehicle(int capacity, int speed = 10)
+        public Vehicle(int capacity = 6, int speed = 10)
         {
             _capacity = capacity;
             _speed = speed;

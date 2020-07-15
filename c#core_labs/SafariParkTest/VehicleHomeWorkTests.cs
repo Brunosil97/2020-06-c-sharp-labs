@@ -29,5 +29,15 @@ namespace SafariParkTest
             Assert.AreEqual(40, v.Position);
             Assert.AreEqual("Moving along", result);
         }
+
+        [TestCase(0, 0)]
+        [TestCase(1,1)]
+        [TestCase(4, 4)]
+        public void VehicleCapacityTest(int numPassengers, int expectedPassengers)
+        {
+            Vehicle v = new Vehicle(5);
+            v.NumPassengers = numPassengers;
+            Assert.AreEqual(expectedPassengers, v.NumPassengers);
+        }
     }
 }
