@@ -25,6 +25,11 @@ namespace SafariPark
             return $"{GetFullName()} has taken a photo with their {_camera}";
         }
 
+        public override string ToString()
+        {
+            return $"{base.ToString()} camera: {_camera}";
+        }
+
     }
 
     public class MonsterHunter : Hunter
@@ -35,5 +40,9 @@ namespace SafariPark
             _weapon = weapon;
         }
        
+        public sealed override string ToString()
+        {
+            return $"{base.ToString()} WEAPON : {_weapon}";
+        }
     }
 }

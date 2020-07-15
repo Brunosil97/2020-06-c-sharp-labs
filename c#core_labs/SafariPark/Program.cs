@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Net.Cache;
 
@@ -30,14 +31,31 @@ namespace SafariPark
             //DemoMethod(pt3d, john);
 
             Hunter bruno = new Hunter("Bruno", "Silva", "nikon") { Age = 23 };
-            Console.WriteLine(bruno.Age); 
+            Console.WriteLine(bruno.Age);
             Console.WriteLine(bruno.Shoot());
 
             //default inherited construction
             //Hunter bruno2 = new Hunter();
             //Console.WriteLine(bruno2.Age);
             //Console.WriteLine(bruno2.Shoot());
-          
+
+
+            //create a list of objects
+            Person bruno1 = new Person("Bruno", "Silva") { Age = 23 };
+            Hunter nish = new Hunter("Nish", "French", "nikon") ;
+            MonsterHunter luis = new MonsterHunter("Luis", "Wolton", "nikon", "fists");
+
+            var safariList = new List<object>();
+            safariList.Add(bruno1);
+            safariList.Add(nish);
+            safariList.Add(luis);
+
+            foreach(var obj in safariList)
+            {
+                Console.WriteLine(obj.ToString());
+            }
+
+
         }
 
         static void DemoMethod(Point3D pt, Person p)
