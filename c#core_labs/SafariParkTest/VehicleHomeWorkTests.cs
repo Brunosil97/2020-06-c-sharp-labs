@@ -33,6 +33,7 @@ namespace SafariParkTest
         [TestCase(0, 0)]
         [TestCase(1,1)]
         [TestCase(4, 4)]
+        [TestCase(6, 5)]
         public void VehicleCapacityTest(int numPassengers, int expectedPassengers)
         {
             Vehicle v = new Vehicle(5);
