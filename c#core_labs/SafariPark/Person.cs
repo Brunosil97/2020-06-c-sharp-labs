@@ -8,19 +8,22 @@ namespace SafariPark
     public class Person
     {
         //attributes of the class
-        private string _firstName; //only the class person can access
+        protected string _firstName; //only the class person can access
         private string _lastName;
+
+        //can make attributes protected: still private but classes dereived from person can use it
+        // protected string _firstName
 
         //
         private int _age;
 
-        //public int Age 
-        //{
-        //    get { return _age; }
-        //    set { if (value >= 0) _age = value; }
-        //}
+        public int Age 
+        {
+            get { return _age; }
+            set { if (value >= 0) _age = value; }
+        }
 
-        public int Age { get; set; } //setting a property
+        //public int Age { get; set; } //setting a property
 
         //create a constructor: has no return value but must have the same name as the class
         //constructor is called when a new Person object is created
