@@ -24,5 +24,16 @@ namespace SafariPark
             //can call methods like so as it inherits from the parent class
             return $"{GetFullName()} has taken a photo with their {_camera}";
         }
+
+    }
+
+    public class MonsterHunter : Hunter
+    {
+        private string _weapon;
+        public MonsterHunter(string firstName, string lastName, string camera, string weapon) : base(firstName, lastName, camera)
+        {
+            _weapon = weapon;
+        }
+       
     }
 }
