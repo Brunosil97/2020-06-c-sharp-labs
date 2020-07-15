@@ -30,9 +30,9 @@ namespace SafariPark
 
             //DemoMethod(pt3d, john);
 
-            Hunter bruno = new Hunter("Bruno", "Silva", "nikon") { Age = 23 };
-            Console.WriteLine(bruno.Age);
-            Console.WriteLine(bruno.Shoot());
+            //Hunter bruno = new Hunter("Bruno", "Silva", "nikon") { Age = 23 };
+            //Console.WriteLine(bruno.Age);
+            //Console.WriteLine(bruno.Shoot());
 
             //default inherited construction
             //Hunter bruno2 = new Hunter();
@@ -41,20 +41,28 @@ namespace SafariPark
 
 
             //create a list of objects
-            Person bruno1 = new Person("Bruno", "Silva") { Age = 23 };
-            Hunter nish = new Hunter("Nish", "French", "nikon") ;
-            MonsterHunter luis = new MonsterHunter("Luis", "Wolton", "nikon", "fists");
+            //Person bruno1 = new Person("Bruno", "Silva") { Age = 23 };
+            //Hunter nish = new Hunter("Nish", "French", "nikon") ;
+            //MonsterHunter luis = new MonsterHunter("Luis", "Wolton", "nikon", "fists");
 
-            var safariList = new List<object>();
-            safariList.Add(bruno1);
-            safariList.Add(nish);
-            safariList.Add(luis);
+            //var safariList = new List<object>();
+            //safariList.Add(bruno1);
+            //safariList.Add(nish);
+            //safariList.Add(luis);
 
-            foreach(var obj in safariList)
-            {
-                Console.WriteLine(obj.ToString());
-            }
+            //foreach(var obj in safariList)
+            //{
+            //    Console.WriteLine(obj.ToString());
+            //}
 
+            Airplane air = new Airplane(200, 100, "JetRUs", 0) { NumPassengers = 150 };
+            air.Ascend(500);
+            Console.WriteLine(air.Move(3));
+            Console.WriteLine(air);
+            air.Descend(200);
+            Console.WriteLine(air.Move());
+            air.Move();
+            Console.WriteLine(air);
 
         }
 
