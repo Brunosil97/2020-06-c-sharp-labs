@@ -32,6 +32,11 @@ namespace SafariPark
             Hunter bruno = new Hunter("Bruno", "Silva", "nikon") { Age = 23 };
             Console.WriteLine(bruno.Age); 
             Console.WriteLine(bruno.Shoot());
+
+            //default inherited construction
+            //Hunter bruno2 = new Hunter();
+            //Console.WriteLine(bruno2.Age);
+            //Console.WriteLine(bruno2.Shoot());
           
         }
 

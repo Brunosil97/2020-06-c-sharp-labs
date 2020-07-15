@@ -14,6 +14,11 @@ namespace SafariPark
             //dont need to call firstname and last name, as it gets it from the person class
         }
 
+        public Hunter()//default constructor
+        {
+
+        }
+
         public string Shoot()
         {
             //can call methods like so as it inherits from the parent class

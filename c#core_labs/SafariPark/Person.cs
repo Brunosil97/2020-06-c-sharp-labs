@@ -34,6 +34,11 @@ namespace SafariPark
             _lastName = lastName;
         }
 
+        public Person()//default constructor
+        {
+
+        }
+
         //overloading the constructor
         //public Person(string firstName, string lastName, int aAge)
         //{
