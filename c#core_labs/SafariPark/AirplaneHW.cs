@@ -10,10 +10,10 @@ namespace SafariPark
         private int _altitude;
 
 
-        public Airplane(int capacity, int speed, string airline, int altitude) : base(capacity, speed)
+        public Airplane(int capacity, int speed, string airline) : base(capacity, speed)
         {
             _airline = airline;
-            _altitude = altitude;
+            
         }
 
         public override string Move(int times)
@@ -26,14 +26,14 @@ namespace SafariPark
             return $"{base.Move()} at an altitude {_altitude} metres";
         }
 
-        public int Ascend(int num)
+        public void Ascend(int num)
         {
-            return _altitude += num;
+            _altitude += num;
         }
 
-        public int Descend(int num)
+        public void Descend(int num)
         {
-            return _altitude -= num;
+             _altitude -= num;
         }
 
         public override string ToString()

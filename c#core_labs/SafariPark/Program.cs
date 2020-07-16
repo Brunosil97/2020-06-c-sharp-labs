@@ -55,7 +55,7 @@ namespace SafariPark
             //    Console.WriteLine(obj.ToString());
             //}
 
-            Airplane air = new Airplane(200, 100, "JetRUs", 0) { NumPassengers = 150 };
+            Airplane air = new Airplane(200, 100, "JetRUs") { NumPassengers = 150 };
             air.Ascend(500);
             Console.WriteLine(air.Move(3));
             Console.WriteLine(air);
