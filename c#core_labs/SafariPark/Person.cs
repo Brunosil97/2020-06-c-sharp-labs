@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SafariPark
 {
-    public class Person
+    public class Person : IMovable
     {
         //attributes of the class
         protected string _firstName; //only the class person can access
@@ -55,6 +55,16 @@ namespace SafariPark
         public override string ToString()
         {
             return $"{base.ToString()} Name: {GetFullName()} Age: {_age}";
+        }
+
+        public string Move(int times)
+        {
+            return $"Walking along {times} times";
+        }
+
+        public string Move()
+        {
+            return "Moving along";
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SafariPark
 {
-    public class Vehicle
+    public class Vehicle : IMovable
     {
         protected int _capacity;
         protected int _numPassengers;
