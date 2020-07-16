@@ -54,7 +54,7 @@ namespace SafariPark
 
         public override string ToString()
         {
-            return $"{base.ToString()} Name: {GetFullName()} Age: {_age}";
+            return $"{GetFullName()}";
         }
 
         public string Move(int times)

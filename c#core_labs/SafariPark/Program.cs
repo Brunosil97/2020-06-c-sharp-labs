@@ -67,38 +67,70 @@ namespace SafariPark
 
 
             //working with Polymorphism
-            var bruno = new Person("Bruno", "Silva");
-            var boeing = new Airplane(400, 200, "Boeing");
-            var v1 = new Vehicle(12, 20);
-            var phil = new Hunter("Phil", "Anderson", "Pentax");
+            //var bruno = new Person("Bruno", "Silva");
+            //var boeing = new Airplane(400, 200, "Boeing");
+            //var v1 = new Vehicle(12, 20);
+            //var phil = new Hunter("Phil", "Anderson", "Pentax");
 
-            var gameObject = new List<Object>()
-            {
-                bruno, 
-                boeing,
-                v1,
-                phil
-            };
+            ////make a list that only contains objects that use IMovable methods
+            //var moveObj = new List<IMovable>()
+            //{
+            //    new Person("Chen", "Shan"),
+            //    new Airplane(400, 200, "RyanAir"),
+            //    new Vehicle(6, 10),
+            //    new Hunter("Croc", "Dundee", "Nikon")
+            //};
+
+            //Console.WriteLine();
+            //Console.WriteLine("Moving objects");
+            //foreach(var item in moveObj)
+            //{
+            //    Console.WriteLine(item.Move(3));
+            //}
+
+            //var gameObject = new List<Object>()
+            //{
+            //    bruno, 
+            //    boeing,
+            //    v1,
+            //    phil
+            //};
 
             //foreach(var item in gameObject)
             //{
             //    Console.WriteLine(item);
             //}
 
-            SpartaWrite(phil);
-            SpartaWrite(bruno);
-            
+            //SpartaWrite(phil);
+            //SpartaWrite(bruno);
+
+
+
+            //public static void SpartaWrite(object obj)
+            //{
+
+            //    Console.WriteLine(obj);
+            //    if(obj is Hunter)
+            //    {
+            //        var HunterObj = (Hunter)obj;
+            //        Console.WriteLine(HunterObj.Shoot());
+            //    }
+            //}
+
+            Camera pentax = new Camera("Pentax");
+            WaterPistol pistol = new WaterPistol("SuperSoaker");
+            LaserGun laserGun = new LaserGun("Acme");
+            Hunter nish = new Hunter("Nish", "Mandal", pentax);
+
+            Console.WriteLine(nish.Shoot());
+            nish.Shooter = pistol;
+            Console.WriteLine(nish.Shoot());
+            nish.Shooter = laserGun;
+            Console.WriteLine(nish.Shoot());
+            nish.Shooter = pistol;
+            Console.WriteLine(nish.Shoot());
+
         }
 
-        public static void SpartaWrite(object obj)
-        {
-            
-            Console.WriteLine(obj);
-            if(obj is Hunter)
-            {
-                var HunterObj = (Hunter)obj;
-                Console.WriteLine(HunterObj.Shoot());
-            }
-        }
     }
 }
