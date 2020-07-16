@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Net.Cache;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SafariPark
 {
@@ -55,21 +56,49 @@ namespace SafariPark
             //    Console.WriteLine(obj.ToString());
             //}
 
-            Airplane air = new Airplane(200, 100, "JetRUs") { NumPassengers = 150 };
-            air.Ascend(500);
-            Console.WriteLine(air.Move(3));
-            Console.WriteLine(air);
-            air.Descend(200);
-            Console.WriteLine(air.Move());
-            air.Move();
-            Console.WriteLine(air);
+            //Airplane air = new Airplane(200, 100, "JetRUs") { NumPassengers = 150 };
+            //air.Ascend(500);
+            //Console.WriteLine(air.Move(3));
+            //Console.WriteLine(air);
+            //air.Descend(200);
+            //Console.WriteLine(air.Move());
+            //air.Move();
+            //Console.WriteLine(air);
 
+
+            //working with Polymorphism
+            var bruno = new Person("Bruno", "Silva");
+            var boeing = new Airplane(400, 200, "Boeing");
+            var v1 = new Vehicle(12, 20);
+            var phil = new Hunter("Phil", "Anderson", "Pentax");
+
+            var gameObject = new List<Object>()
+            {
+                bruno, 
+                boeing,
+                v1,
+                phil
+            };
+
+            //foreach(var item in gameObject)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            SpartaWrite(phil);
+            SpartaWrite(bruno);
+            
         }
 
-        static void DemoMethod(Point3D pt, Person p)
+        public static void SpartaWrite(object obj)
         {
-            pt.y = 1000;
-            p.Age = 92;
+            
+            Console.WriteLine(obj);
+            if(obj is Hunter)
+            {
+                var HunterObj = (Hunter)obj;
+                Console.WriteLine(HunterObj.Shoot());
+            }
         }
     }
 }
