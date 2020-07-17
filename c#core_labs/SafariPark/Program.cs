@@ -117,6 +117,8 @@ namespace SafariPark
             //    }
             //}
 
+            //Polymorphism homework tast, using interface and inheritance
+
             Camera pentax = new Camera("Pentax");
             WaterPistol pistol = new WaterPistol("SuperSoaker");
             LaserGun laserGun = new LaserGun("Acme");

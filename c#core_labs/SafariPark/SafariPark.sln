@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafariPark", "SafariPark.csproj", "{26E6D125-DB7F-47E0-9D0E-0EDAC3FE6F1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafariParkTest", "..\SafariParkTest\SafariParkTest.csproj", "{A4A013AF-295E-4758-A57B-F7861A0551BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafariParkTest", "..\SafariParkTest\SafariParkTest.csproj", "{A4A013AF-295E-4758-A57B-F7861A0551BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldWPF", "..\HelloWorldWPF\HelloWorldWPF.csproj", "{DC32FD37-0794-4FE2-8B5C-8A3E07E4141D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A4A013AF-295E-4758-A57B-F7861A0551BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4A013AF-295E-4758-A57B-F7861A0551BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4A013AF-295E-4758-A57B-F7861A0551BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC32FD37-0794-4FE2-8B5C-8A3E07E4141D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC32FD37-0794-4FE2-8B5C-8A3E07E4141D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC32FD37-0794-4FE2-8B5C-8A3E07E4141D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC32FD37-0794-4FE2-8B5C-8A3E07E4141D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
