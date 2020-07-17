@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafariParkTest", "..\Safari
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldWPF", "..\HelloWorldWPF\HelloWorldWPF.csproj", "{DC32FD37-0794-4FE2-8B5C-8A3E07E4141D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseIt", "..\ExpenseIt\ExpenseIt.csproj", "{14C98150-150E-4254-BB14-70BC748A861E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{DC32FD37-0794-4FE2-8B5C-8A3E07E4141D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC32FD37-0794-4FE2-8B5C-8A3E07E4141D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC32FD37-0794-4FE2-8B5C-8A3E07E4141D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C98150-150E-4254-BB14-70BC748A861E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C98150-150E-4254-BB14-70BC748A861E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C98150-150E-4254-BB14-70BC748A861E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C98150-150E-4254-BB14-70BC748A861E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
