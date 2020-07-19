@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace RadioApp
 {
     public class Radio
@@ -19,6 +20,7 @@ namespace RadioApp
 
             if(_on == true)
             {
+                
                 playChannel += $"Playing channel {_channel}";
             }
             else 
