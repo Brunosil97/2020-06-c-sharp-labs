@@ -69,16 +69,16 @@ namespace CSharpSQLApp
                 {
                     int affected = command.ExecuteNonQuery();
                 }
-                using (var updateCustomerCommand = new SqlCommand("UpdateCustomer", connection))
-                {
-                    // Using System.Data;
-                    updateCustomerCommand.CommandType = CommandType.StoredProcedure;
-                    // add parameters
-                    updateCustomerCommand.Parameters.AddWithValue("ID", newCustomer.CustomerId);
-                    updateCustomerCommand.Parameters.AddWithValue("NewName", "Joe Bloggs Updated Name");
-                    // run the update
-                    int affected = updateCustomerCommand.ExecuteNonQuery();
-                }
+                //using (var updateCustomerCommand = new SqlCommand("UpdateCustomer", connection))
+                //{
+                //    // Using System.Data;
+                //    updateCustomerCommand.CommandType = CommandType.StoredProcedure;
+                //    // add parameters
+                //    updateCustomerCommand.Parameters.AddWithValue("ID", newCustomer.CustomerId);
+                //    updateCustomerCommand.Parameters.AddWithValue("NewName", "Joe Bloggs Updated Name");
+                //    // run the update
+                //    int affected = updateCustomerCommand.ExecuteNonQuery();
+                //}
 
                 string sqlDeleteString = $"DELETE FROM CUSTOMERS WHERE CustomerId = '{newCustomer.CustomerId}'";
 
