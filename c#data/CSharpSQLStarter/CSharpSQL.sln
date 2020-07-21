@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpSQLApp", "CSharpSQLAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDNWalkthrough", "MDNWalkthrough\MDNWalkthrough.csproj", "{D96973A1-6531-466B-AB97-2D3256EC81B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFNorthWindApp", "EFNorthWindApp\EFNorthWindApp.csproj", "{525A5E78-928E-4339-B4CB-ED85B4A68616}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D96973A1-6531-466B-AB97-2D3256EC81B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D96973A1-6531-466B-AB97-2D3256EC81B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D96973A1-6531-466B-AB97-2D3256EC81B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{525A5E78-928E-4339-B4CB-ED85B4A68616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{525A5E78-928E-4339-B4CB-ED85B4A68616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{525A5E78-928E-4339-B4CB-ED85B4A68616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{525A5E78-928E-4339-B4CB-ED85B4A68616}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
