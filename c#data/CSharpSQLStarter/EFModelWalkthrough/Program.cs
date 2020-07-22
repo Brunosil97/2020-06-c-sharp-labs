@@ -7,8 +7,8 @@ namespace EFGetStarted
     {
         static void Main()
         {
-            using (var db = new BloggingContext())
-            {
+        //    using (var db = new bloggingcontext())
+        //    {
                 // Create
                 //Console.WriteLine("Inserting a new blog");
                 //db.Add(new Blog { Url = "http://blogs.msdn.com/adonet" });
@@ -28,44 +28,27 @@ namespace EFGetStarted
 
 
                 // Read
-                Console.WriteLine("Querying for a blog");
-                var blog = db.Blogs
-                    .OrderBy(b => b.BlogId)
-                    .First();
+                //Console.WriteLine("Querying for a blog");
+                //var blog = db.Blogs
+                //    .OrderBy(b => b.BlogId)
+                //    .First();
 
-                // Update
-                Console.WriteLine("Updating the blog and adding a post");
-                blog.Url = "https://devblogs.microsoft.com/dotnet";
-                blog.Posts.Add(
-                    new Post
-                    {
-                        Title = "Hello World",
-                        Content = "I wrote an app using EF Core!"
-                    });
-                db.SaveChanges();
+                //// Update
+                //Console.WriteLine("Updating the blog and adding a post");
+                //blog.Url = "https://devblogs.microsoft.com/dotnet";
+                //blog.Posts.Add(
+                //    new Post
+                //    {
+                //        Title = "Hello World",
+                //        Content = "I wrote an app using EF Core!"
+                //    });
+                //db.SaveChanges();
 
                 ////delete
                 //Console.WriteLine("delete the blog");
                 //db.Remove(blog);
                 //db.SaveChanges();
-
-
-
-                var query =
-                    from blogs in db.Blogs
-                    join post in db.Posts on blogs.BlogId equals post.BlogId
-                    select new
-                    {
-                        BlogId = blogs.BlogId,
-                        Url = blogs.Url,
-                        Content = post.Content
-                    };
-
-                foreach (var post in query)
-                {
-                    Console.WriteLine($"{post.BlogId} - {post.Url} - {post.Content}");
-                }
-            }
+            //}
         }
     }
 }
