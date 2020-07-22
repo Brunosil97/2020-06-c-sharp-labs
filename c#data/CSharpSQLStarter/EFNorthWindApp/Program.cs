@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFNorthWindApp
@@ -50,10 +51,7 @@ namespace EFNorthWindApp
                 //1.1
                 var query1 =
                      db.Customers.Where(c => c.City == "London" || c.City == "Paris");
-                //from customer in db.Customers
-                //where customer.City == "London" || customer.City == "Paris"
-                //select customer;
-
+  
                 Console.WriteLine("Query 1.1");
                 foreach(var cust in query1)
                 {
@@ -90,22 +88,34 @@ namespace EFNorthWindApp
                 }
 
                 //1.4
+                //var query4 =
+                //    from product in db.Products         
+                //    join category in db.Categories on product.CategoryId equals category.CategoryId
+                //    group category by category.CategoryName into productCategory
+                //    select new
+                //    {
+                //        CategoryName = productCategory.Key,
+                //        NoOfProducts = productCategory.Count()
+                //    };
+
+                //Console.WriteLine("Query 4");
+                //foreach(var result in query4)
+                //{
+                //    Console.WriteLine($"{result.CategoryName} - {result.NoOfProducts}");
+                //}
+
                 var query4 =
-                    from product in db.Products
-              
-                    join category in db.Categories on product.CategoryId equals category.CategoryId
-                    group category by category.CategoryName into productCategory
-                    select new
-                    {
-                        CategoryName = productCategory.Key,
-                        NoOfProducts = productCategory.Count()
-                    };
+                     db.Products.Include(p => p.Category)
+                    .GroupBy(p => p.Category.CategoryName)
+                    .OrderBy(item => item.Key)
+                    .Select(item => Tuple.Create(item.Key, item.Count()));
 
                 Console.WriteLine("Query 4");
+
                 foreach(var result in query4)
                 {
-                    Console.WriteLine($"{result.CategoryName} - {result.NoOfProducts}");
-                }
+                    Console.WriteLine($"{result.Item1} - {result.Item2}");
+                }    
 
                 //1.5
                 var query5 =
@@ -116,6 +126,36 @@ namespace EFNorthWindApp
                 {
                     Console.WriteLine($"{person.TitleOfCourtesy} {person.FirstName} {person.LastName} {person.City}");
                 }
+
+                //1.6
+                var query6 =
+                    from order in db.Orders
+                    join orderDetail in db.OrderDetails on order.OrderId equals orderDetail.OrderId
+                    join employeeTerritory in db.EmployeeTerritories on order.EmployeeId equals employeeTerritory.EmployeeId
+                    join territory in db.Territories on employeeTerritory.TerritoryId equals territory.TerritoryId
+                    join region in db.Region on territory.RegionId equals region.RegionId
+                    group orderDetail by region.RegionDescription into regionGroup
+                    where regionGroup.Sum(s => s.UnitPrice * s.Quantity * ((decimal)s.Discount) ) > 100000
+                     
+                    select new
+                    {
+                        Region = regionGroup.Key,
+                        TotalSales = regionGroup.Sum(s => s.UnitPrice * (s.Quantity * (decimal)s.Discount))
+                       
+                    };
+
+                Console.WriteLine("Query 6");
+                foreach(var result in query6)
+                {
+                    Console.WriteLine($"{result.Region.Trim()} - {result.TotalSales}");
+                }
+
+                //1.7
+                var query7 =
+                    db.Orders.Where(o => o.Freight > 100 && (o.ShipCountry == "USA" || o.ShipCountry == "UK")).Count();
+
+                Console.WriteLine("Query 7");
+                Console.WriteLine(query7);
 
             }
         }
