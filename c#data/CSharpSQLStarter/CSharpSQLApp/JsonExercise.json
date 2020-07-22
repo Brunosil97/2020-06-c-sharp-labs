@@ -1,0 +1,23 @@
+{
+  "Person": {
+    "name": "Bruno Silva",
+    "age": 23,
+    "employeed": false,
+    "hobbies": [
+      {
+        "name": "gaming",
+        "format": [ "xbox", "switch" ]
+      },
+      {
+        "name": "history",
+        "format": [ "youtube", "videos" ]
+      },
+      {
+        "name": "football",
+        "format" : ["tv", "fifa"]
+      }
+    ],
+    "switchPads": [ "Red", "Blue", "Yellow", "brown" ],
+    "nullValue" : null 
+  }
+}

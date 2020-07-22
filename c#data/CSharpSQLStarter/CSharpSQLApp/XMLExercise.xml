@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<academy title ="Sparta Global Academy">
+	<trainee1>
+		<name>Bruno Silva</name>
+		<stream>C# Development</stream>
+		<course>C#</course>
+		<location>London</location>
+	</trainee1>
+	<trainee2>
+		<name>Chirs Norman</name>
+		<stream>C# Development</stream>
+		<course>C#</course>
+		<location>London</location>
+	</trainee2>
+</academy>
