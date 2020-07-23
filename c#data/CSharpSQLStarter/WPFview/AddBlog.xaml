@@ -1,0 +1,21 @@
+﻿<Window x:Class="WPFview.AddBlog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFview"
+        mc:Ignorable="d"
+        Title="AddBlog" Height="350" Width="700">
+    <Grid>
+        <Label Content="Add A Blog" HorizontalAlignment="Left" VerticalAlignment="Top" Height="66" Width="240" FontSize="42"/>
+
+        <TextBox x:Name="urlInput" HorizontalAlignment="Center" Height="66" Margin="0,200,0,0" Background="Beige" TextWrapping="Wrap" VerticalAlignment="Top" Width="680"/>
+        <Label Content="Blog Url:" HorizontalAlignment="Left" Margin="0,158,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+        <TextBox x:Name="authorInput" HorizontalAlignment="Center" Height="66" Margin="0,101,0,0" Background="Beige" TextWrapping="Wrap" VerticalAlignment="Top" Width="680"/>
+        <Label Content="Blog Author:" HorizontalAlignment="Left" Margin="0,66,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+        <Button Content="Save" HorizontalAlignment="Left" Margin="563,271,0,0" VerticalAlignment="Top" Height="41" Width="114" Background="Green" Click="Button_Click"/>
+
+    </Grid>
+</Window>

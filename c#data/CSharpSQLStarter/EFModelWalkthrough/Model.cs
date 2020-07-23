@@ -12,12 +12,14 @@ namespace EFGetStarted
             => options.UseSqlServer(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = Blogging;");
     }
 
-    public class Blog
+    public partial class Blog
     {
         public int BlogId { get; set; }
+        public string Author { get; set; }
         public string Url { get; set; }
 
         public List<Post> Posts { get; } = new List<Post>();
+
     }
 
     public class Post

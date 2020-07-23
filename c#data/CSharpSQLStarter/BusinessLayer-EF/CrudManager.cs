@@ -30,7 +30,7 @@ namespace BusinessLayer_EF
 
             //Update Test
             //var update = new CrudManager();
-            //update.UpdateABlog(3, "https://updated");
+            //update.UpdateABlog(1, "https://updated", "Chirs Norman");
 
             //Delete a blog
             //var delete = new CrudManager();
@@ -38,12 +38,13 @@ namespace BusinessLayer_EF
 
         }
 
-        public void CreateBlog(string url)
+        public void CreateBlog(string url, string author)
         {
             using (var db = new BloggingContext())
             {
                 var blog = new Blog();
                 blog.Url = url;
+                blog.Author = author;
                 db.Add(blog);
                 db.SaveChanges();
             }
@@ -57,12 +58,13 @@ namespace BusinessLayer_EF
             }
         }
 
-        public void UpdateABlog(int blogId, string url)
+        public void UpdateABlog(int blogId, string url, string author)
         {
             using (var db = new BloggingContext())
             {
                 selectedBlog = db.Blogs.Where(b => b.BlogId == blogId).FirstOrDefault();
                 selectedBlog.Url = url;
+                selectedBlog.Author = author;
                 db.SaveChanges();
             }
         }
@@ -75,6 +77,11 @@ namespace BusinessLayer_EF
                 db.Blogs.Remove(selectedBlog);
                 db.SaveChanges();
             }
+        }
+
+        public void SetSelectedBlog(object selectedItem)
+        {
+            selectedBlog = (Blog)selectedItem;
         }
     }
 }
