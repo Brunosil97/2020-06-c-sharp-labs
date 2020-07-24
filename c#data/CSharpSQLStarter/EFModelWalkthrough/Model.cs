@@ -22,7 +22,7 @@ namespace EFGetStarted
 
     }
 
-    public class Post
+    public partial class Post
     {
         public int PostId { get; set; }
         public string Title { get; set; }

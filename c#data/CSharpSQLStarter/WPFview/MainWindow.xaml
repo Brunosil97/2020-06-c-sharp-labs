@@ -31,7 +31,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="ListBoxPosts" Grid.Row="4" Grid.Column="0" FontSize="43">Posts</ListBox>
+            <ListBox x:Name="ListBoxPosts" Grid.Row="4" Grid.Column="0" SelectionChanged="ListBoxPosts_SelectionChanged"></ListBox>
 
         </Grid>
 
@@ -68,6 +68,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -77,13 +78,15 @@
             </Grid.ColumnDefinitions>
             <Label x:Name="PostId" Grid.Row="0" Grid.Column="0" >Title</Label>
             <Label x:Name="PostName" Grid.Row="1" Grid.Column="0" >Content</Label>
+            <Label x:Name="PostAuthor" Grid.Row="2" Grid.Column="0" >Author</Label>
 
-            <TextBox x:Name="TextpostId" Grid.Row="0" Grid.Column="1" IsEnabled="False" IsReadOnlyCaretVisible="True"></TextBox>
-            <TextBox x:Name="TextpostName" Grid.Row="1" Grid.Column="1"></TextBox>
+            <TextBox x:Name="TextpostTitle" Grid.Row="0" Grid.Column="1"></TextBox>
+            <TextBox x:Name="TextpostContent" Grid.Row="1" Grid.Column="1"></TextBox>
+            <TextBox x:Name="TextpostAuthor" Grid.Row="2" Grid.Column="1" IsEnabled="False" IsReadOnlyCaretVisible="True"></TextBox>
 
-            <Button x:Name="ButtonAddPost" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="Beige" Content="Add"/>
-            <Button x:Name="ButtonUpdatePost" Grid.Row="3" Grid.Column="1" Background="#8db0e8" Content="Update"/>
-            <Button x:Name="ButtonDeletePost" Grid.Row="3" Grid.Column="0" Background="Red" Content="Delete"/>
+            <Button x:Name="ButtonAddPost" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Background="Beige" Content="Add"/>
+            <Button x:Name="ButtonUpdatePost" Grid.Row="4" Grid.Column="1" Background="#8db0e8" Content="Update" Height="43" VerticalAlignment="Top" Click="ButtonUpdatePost_Click"/>
+            <Button x:Name="ButtonDeletePost" Grid.Row="4" Grid.Column="0" Background="Red" Content="Delete"/>
         </Grid>
 
 

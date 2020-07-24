@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using EFGetStarted;
 using EFModelWalkthrough;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace BusinessLayer_EF
@@ -10,32 +11,9 @@ namespace BusinessLayer_EF
     public class CrudManager
     {
         public Blog selectedBlog { get; set; }
+        public Post selectedPost { get; set; }
         static void Main(string[] args)
         {
-
-            //Test to see if creating a blog works
-            //var create = new CrudManager();
-            //    create.CreateBlog("https://docs.microsoft.com/en-us/ef/core/get-started/?tabs=visual-studio");
-
-            //create.CreateBlog("http://thisissecondblog.com");
-
-
-            //Test to see if i can retrieve
-            //var read = new CrudManager();
-            //var all = read.ReadAllBlogs();
-            //foreach(var blog in all)
-            //{
-            //    Console.WriteLine(blog.Url);
-            //}    
-
-            //Update Test
-            //var update = new CrudManager();
-            //update.UpdateABlog(1, "https://updated", "Chirs Norman");
-
-            //Delete a blog
-            //var delete = new CrudManager();
-            //delete.DeleteABlog(4);
-
         }
 
         public void CreateBlog(string url, string author)
@@ -50,11 +28,33 @@ namespace BusinessLayer_EF
             }
         }
 
+        public void CreatePost(int blogId, string title, string context)
+        {
+            using (var db = new BloggingContext())
+            {
+                var post = new Post();
+                post.BlogId = blogId;
+                post.Title = title;
+                post.Content = context;
+                db.Add(post);
+                db.SaveChanges();
+            }
+        }
+
         public List<Blog> ReadAllBlogs()
         {
             using (var db = new BloggingContext())
             {
                 return db.Blogs.ToList();
+            }
+        }
+
+        public List<Post> ReadAllPosts(int blogId)
+        {
+            using (var db = new BloggingContext())
+            {
+                return db.Blogs.Where(b => b.BlogId == blogId).Include(p => p.Posts).FirstOrDefault().Posts.ToList();
+                   //db.Posts.Where(p => p.BlogId == blogId).ToList();
             }
         }
 
@@ -65,6 +65,17 @@ namespace BusinessLayer_EF
                 selectedBlog = db.Blogs.Where(b => b.BlogId == blogId).FirstOrDefault();
                 selectedBlog.Url = url;
                 selectedBlog.Author = author;
+                db.SaveChanges();
+            }
+        }
+
+        public void UpdateAPost(int postId, string title, string context)
+        {
+            using(var db = new BloggingContext())
+            {
+                selectedPost = db.Posts.Where(p => p.PostId == postId).FirstOrDefault();
+                selectedPost.Title = title;
+                selectedPost.Content = context;
                 db.SaveChanges();
             }
         }
@@ -82,6 +93,11 @@ namespace BusinessLayer_EF
         public void SetSelectedBlog(object selectedItem)
         {
             selectedBlog = (Blog)selectedItem;
+        }
+
+        public void setSelectedPost(object selectedItem)
+        {
+            selectedPost = (Post)selectedItem;
         }
     }
 }

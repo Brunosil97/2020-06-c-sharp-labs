@@ -34,6 +34,14 @@ namespace WPFview
             ListBoxBlogs.ItemsSource = _crudManager.ReadAllBlogs();
         }
 
+        public void PopulatePostBox()
+        {
+            if (_crudManager.selectedBlog != null)
+            {
+                ListBoxPosts.ItemsSource = _crudManager.ReadAllPosts(_crudManager.selectedBlog.BlogId);
+            }
+        }
+
         public void PopulateBlogFields()
         {
             if(_crudManager.selectedBlog != null)
@@ -41,6 +49,16 @@ namespace WPFview
                 BlogId.Text = _crudManager.selectedBlog.BlogId.ToString();
                 BlogAuthorField.Text = _crudManager.selectedBlog.Author;
                 BlogUrl.Text = _crudManager.selectedBlog.Url;
+            }
+        }
+
+        public void PopulatePostFields()
+        {
+            if(_crudManager.selectedPost != null)
+            {
+                TextpostTitle.Text = _crudManager.selectedPost.Title;
+                TextpostContent.Text = _crudManager.selectedPost.Content;
+                TextpostAuthor.Text = _crudManager.selectedBlog.Author;
             }
         }
 
@@ -73,18 +91,32 @@ namespace WPFview
             }
         }
 
+        private void ButtonUpdatePost_Click(object sender, RoutedEventArgs e)
+        {
+            if(_crudManager.selectedPost != null)
+            {
+                _crudManager.UpdateAPost(_crudManager.selectedPost.PostId, TextpostTitle.Text, TextpostContent.Text);
+                PopulatePostFields();
+            }
+        }
+
         private void ListBoxBlogs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if(ListBoxBlogs.SelectedItem != null)
             {
                 _crudManager.SetSelectedBlog(ListBoxBlogs.SelectedItem);
                 PopulateBlogFields();
+                PopulatePostBox();
             }
         }
 
         private void ListBoxPosts_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            if(ListBoxPosts.SelectedItem != null)
+            {
+                _crudManager.setSelectedPost(ListBoxPosts.SelectedItem);
+                PopulatePostFields();
+            }
         }
     }
 }
