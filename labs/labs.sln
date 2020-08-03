@@ -41,9 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_19_iterations", "lab_19
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_20_data_types_2", "lab_20_data_types_2\lab_20_data_types_2.csproj", "{C77318DC-354B-4ED7-B0CF-BCB48F46341F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_21_exceptions", "lab_21_exceptions\lab_21_exceptions.csproj", "{165F57DC-83D1-47CC-AD2F-C2D571A11F30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_21_exceptions", "lab_21_exceptions\lab_21_exceptions.csproj", "{165F57DC-83D1-47CC-AD2F-C2D571A11F30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_22_collections", "lab_22_collections\lab_22_collections.csproj", "{B91AF435-FABD-4E56-BA71-92C2D9E82651}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_22_collections", "lab_22_collections\lab_22_collections.csproj", "{B91AF435-FABD-4E56-BA71-92C2D9E82651}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_23_demo_api", "lab_23_demo_api\lab_23_demo_api.csproj", "{337FE20F-C73C-4D1E-921F-57D869A195F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{B91AF435-FABD-4E56-BA71-92C2D9E82651}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B91AF435-FABD-4E56-BA71-92C2D9E82651}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B91AF435-FABD-4E56-BA71-92C2D9E82651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{337FE20F-C73C-4D1E-921F-57D869A195F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{337FE20F-C73C-4D1E-921F-57D869A195F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{337FE20F-C73C-4D1E-921F-57D869A195F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{337FE20F-C73C-4D1E-921F-57D869A195F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
