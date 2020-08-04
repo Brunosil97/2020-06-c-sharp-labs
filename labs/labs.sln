@@ -59,15 +59,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_28_lambda_delegates", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_29_basic_events", "lab_29_basic_events\lab_29_basic_events.csproj", "{70B8FA08-B7D5-4A3A-AD4D-E638726DA944}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_30_oop_events", "lab_30_oop_events\lab_30_oop_events.csproj", "{73F2068A-DD83-4261-9B87-BDE5CBB05E4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_30_oop_events", "lab_30_oop_events\lab_30_oop_events.csproj", "{73F2068A-DD83-4261-9B87-BDE5CBB05E4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_31_tasks", "lab_31_tasks\lab_31_tasks.csproj", "{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_31_tasks", "lab_31_tasks\lab_31_tasks.csproj", "{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_32_task_arrays", "lab_32_task_arrays\lab_32_task_arrays.csproj", "{63F8E192-A6BB-491C-93C3-008B92BC578B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_32_task_arrays", "lab_32_task_arrays\lab_32_task_arrays.csproj", "{63F8E192-A6BB-491C-93C3-008B92BC578B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_33_task_parallel_processing", "lab_33_task_parallel_processing\lab_33_task_parallel_processing.csproj", "{63CE0A68-99AE-491F-B4AB-7B0E2F2C4756}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_33_task_parallel_processing", "lab_33_task_parallel_processing\lab_33_task_parallel_processing.csproj", "{63CE0A68-99AE-491F-B4AB-7B0E2F2C4756}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_34_async_and_await", "lab_34_async_and_await\lab_34_async_and_await.csproj", "{5D7B425B-D67C-410A-AF68-89E290C9E444}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_34_async_and_await", "lab_34_async_and_await\lab_34_async_and_await.csproj", "{5D7B425B-D67C-410A-AF68-89E290C9E444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_35_hw_async_task", "lab_35_hw_async_task\lab_35_hw_async_task.csproj", "{8284ECCC-614D-4148-AC95-9383263C6C7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +209,10 @@ Global
 		{5D7B425B-D67C-410A-AF68-89E290C9E444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D7B425B-D67C-410A-AF68-89E290C9E444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D7B425B-D67C-410A-AF68-89E290C9E444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8284ECCC-614D-4148-AC95-9383263C6C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8284ECCC-614D-4148-AC95-9383263C6C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8284ECCC-614D-4148-AC95-9383263C6C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8284ECCC-614D-4148-AC95-9383263C6C7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

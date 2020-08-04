@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace lab_34_async_and_await
 {
     class Program
     {
         static Stopwatch s = new Stopwatch();
+        static List<string> fileOutput = new List<string>();
+        static List<string> streamOutput = new List<string>();
+
         static void Main(string[] args)
         {
             /*
@@ -73,12 +79,57 @@ namespace lab_34_async_and_await
 
             string fileOutput2 = stringBuilder.ToString();
             Console.WriteLine($"Streamreader to string took {s.ElapsedMilliseconds}");
+
+            //async read - basic file read async
+            s.Restart();
+            ReadTextToArrayAsync();
+            Console.WriteLine($"Async file read took {s.ElapsedMilliseconds} with {fileOutput.Count}");
+
+            s.Restart();
+            StreamReadTextFileAsync();
+            Console.WriteLine($"Async stream read took {s.ElapsedMilliseconds} with {streamOutput.Count}");
+
+            //final lab - get results but can you turn this into proper async
+            //(This way only partly works - task overnight to improve it)
+            s.Restart();
+            //this returns a 'task'
+            var arrayOutput = ReturnTextToArrayAsync();
+
+            Console.WriteLine($"Async array returned in {s.ElapsedMilliseconds} with {arrayOutput.Result.Length} records");
+
         }
 
         static string[] ReadTextFileToArray()
         {
             var array = File.ReadAllLines("data.txt");
             return array;
+        }
+
+        static async void ReadTextToArrayAsync()
+        {
+            var array = await File.ReadAllLinesAsync("data.txt");
+            fileOutput = array.ToList();
+        }
+
+        //This one returns data with task
+        static async Task<string[]> ReturnTextToArrayAsync()
+        {
+            var array = await File.ReadAllLinesAsync("data.txt");
+            return array;
+        }
+
+        static async void StreamReadTextFileAsync()
+        {
+            
+            using (var reader = new StreamReader("data.txt"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    //var array = await File.ReadAllLinesAsync("data.txt");
+                    //streamOutput = array.ToList();
+                    streamOutput.Add(await reader.ReadLineAsync());
+                }
+            }
         }
     }
 }
