@@ -61,6 +61,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_29_basic_events", "lab_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_30_oop_events", "lab_30_oop_events\lab_30_oop_events.csproj", "{73F2068A-DD83-4261-9B87-BDE5CBB05E4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_31_tasks", "lab_31_tasks\lab_31_tasks.csproj", "{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{73F2068A-DD83-4261-9B87-BDE5CBB05E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73F2068A-DD83-4261-9B87-BDE5CBB05E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73F2068A-DD83-4261-9B87-BDE5CBB05E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
