@@ -38,6 +38,15 @@ namespace lab_31_tasks
                 Thread           - set of instructions sent to CPU for processing
                 Single-Threaded  - Runs on the main thread only
                 Multi-Threaded   - Can take advantage of multi core CPUs which can run multiple threads simultaneously
+
+
+            When are tasks threads useful:
+                a) multi-task processing eg background processing of graphics
+                b) Background processing jobs eg overnight tasks for credit card financial reporting
+                c) Website ==> click => data can take 5 seconds but rather than freeze screen, can still work
+
+
+            //With threads and tasks, we have no control over where the operating system will run a particular task
             */
 
             s.Start();

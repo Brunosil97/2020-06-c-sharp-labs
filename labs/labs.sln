@@ -63,6 +63,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_30_oop_events", "lab_30
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_31_tasks", "lab_31_tasks\lab_31_tasks.csproj", "{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_32_task_arrays", "lab_32_task_arrays\lab_32_task_arrays.csproj", "{63F8E192-A6BB-491C-93C3-008B92BC578B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_33_task_parallel_processing", "lab_33_task_parallel_processing\lab_33_task_parallel_processing.csproj", "{63CE0A68-99AE-491F-B4AB-7B0E2F2C4756}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +193,14 @@ Global
 		{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ADC1AAD-B6F4-453D-800A-38A4DC25899D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F8E192-A6BB-491C-93C3-008B92BC578B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F8E192-A6BB-491C-93C3-008B92BC578B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F8E192-A6BB-491C-93C3-008B92BC578B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F8E192-A6BB-491C-93C3-008B92BC578B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CE0A68-99AE-491F-B4AB-7B0E2F2C4756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CE0A68-99AE-491F-B4AB-7B0E2F2C4756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CE0A68-99AE-491F-B4AB-7B0E2F2C4756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CE0A68-99AE-491F-B4AB-7B0E2F2C4756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
