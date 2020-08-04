@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
@@ -45,7 +46,26 @@ namespace lab_33_task_parallel_processing
                     );
             }
             Console.WriteLine($"all completed at {s.ElapsedMilliseconds}");
+            
+
+            //Parallel for
+            Parallel.For(0, 10,
+                i => {
+                    Thread.Sleep(7);
+                    Console.WriteLine($"Parallel for job {i} - running background processing");
+                });
+
+            //parallel foreach
+            var stringArray = new string[] { "hey", "there", "i", "am", "a", "string", "array" };
+            Parallel.ForEach(stringArray,
+                
+                (item) => { Console.WriteLine($"Proccessing string array item {item} with a length of {item.Length}"); }
+                );
+
+            //parallel linq from database
+            var customer = new List<string>(); //imagine its a list of Customers from northwind
             Console.ReadLine();
+
         }
 
         static void OverNightTask01()
