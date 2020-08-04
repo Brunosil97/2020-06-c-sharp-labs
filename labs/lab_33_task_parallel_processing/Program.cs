@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -64,6 +65,10 @@ namespace lab_33_task_parallel_processing
 
             //parallel linq from database
             var customer = new List<string>(); //imagine its a list of Customers from northwind
+            //LINQ as parallel
+            var proccessingOutput = customer.AsParallel();
+
+            
             Console.ReadLine();
 
         }
