@@ -9,6 +9,8 @@ namespace lab_31_tasks
     class Program
     {
         static Stopwatch s = new Stopwatch();
+
+       delegate void MyDelegate();
         static void Main(string[] args)
         {
             /*
@@ -42,7 +44,7 @@ namespace lab_31_tasks
 
             var thread = new Thread(
                 () => {
-                    Thread.Sleep(3000);
+                    //Thread.Sleep(3000);
                     Console.WriteLine($"This is a thread {s.ElapsedMilliseconds}"); }
                 );
 
@@ -50,17 +52,26 @@ namespace lab_31_tasks
             var task01 = new Task(
                 () =>
                 {
-                    Thread.Sleep(1000);
+                    //Thread.Sleep(1000);
                     Console.WriteLine($"This is a task {s.ElapsedMilliseconds}");
                 });
 
-                //create and run at same time
+            //create and run at same time
             var task02 = new Task(
-                () => {
-                    Thread.Sleep(2000);
+                () =>
+                {
+                    //Thread.Sleep(2000);
                     Console.WriteLine($"This is task 2 {s.ElapsedMilliseconds}");
                 }
                 );
+
+            var instance = new MyDelegate(DoThis);
+
+            var task03 = new Task(
+               new Action(instance)
+            );
+
+
             s.Start();
 
             thread.Start();
@@ -69,8 +80,15 @@ namespace lab_31_tasks
 
             task02.Start();
 
+            task03.Start();
+
             Console.WriteLine($"Program has ended {s.ElapsedMilliseconds}");
             Console.ReadLine();
+
+            static void DoThis()
+            {
+                Console.WriteLine($"Im doing this at {s.ElapsedMilliseconds}");
+            }
         }
     }
 }
