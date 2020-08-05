@@ -14,7 +14,7 @@ namespace lab_36_http
         static Uri url2 = new Uri("https://www.bbc.co.uk");
         static void Main(string[] args)
         {
-       
+
             //All sync
             //GetDataUsingWebClient();
             //GetPageUsingWebClient();
@@ -22,7 +22,20 @@ namespace lab_36_http
             //GetPageUsingWebRequest();
 
             //Async
-            GetDataUsingHttpClient();
+            // GetDataUsingHttpClient();
+
+            DeserilizeJsonForUser();
+        }
+
+       static void DeserilizeJsonForUser()
+        {
+            var httpClient = new HttpClient();
+            var httpResponse = httpClient.GetStringAsync(url);
+            var data = httpResponse.Result;
+
+            User user = JsonConvert.DeserializeObject<User>(data);
+
+            Console.WriteLine(user.Title);
         }
 
         static void GetDataUsingHttpClient()
@@ -92,6 +105,10 @@ namespace lab_36_http
 
     public class User
     {
+            public int UserId { get; set; }
+            public int Id { get; set; }
+            public string Title { get; set; }
+            public bool Completed { get; set; }
 
     }
 }
