@@ -69,7 +69,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_33_task_parallel_proces
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_34_async_and_await", "lab_34_async_and_await\lab_34_async_and_await.csproj", "{5D7B425B-D67C-410A-AF68-89E290C9E444}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_35_hw_async_task", "lab_35_hw_async_task\lab_35_hw_async_task.csproj", "{8284ECCC-614D-4148-AC95-9383263C6C7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_35_hw_async_task", "lab_35_hw_async_task\lab_35_hw_async_task.csproj", "{8284ECCC-614D-4148-AC95-9383263C6C7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_36_http", "lab_36_http\lab_36_http.csproj", "{A6C611CD-2A29-45F9-BFD6-C29527F0B8B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -213,6 +215,10 @@ Global
 		{8284ECCC-614D-4148-AC95-9383263C6C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8284ECCC-614D-4148-AC95-9383263C6C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8284ECCC-614D-4148-AC95-9383263C6C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6C611CD-2A29-45F9-BFD6-C29527F0B8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6C611CD-2A29-45F9-BFD6-C29527F0B8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6C611CD-2A29-45F9-BFD6-C29527F0B8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6C611CD-2A29-45F9-BFD6-C29527F0B8B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
