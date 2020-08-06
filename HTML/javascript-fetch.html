@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript fetch Data</title>
+</head>
+<body>
+    <h1>This web page gets some api data</h1>
+    <button onClick="GetData()">Get some data</button>
+    <div id="divTodo">No data yet
+        <ul id="title">
+
+        </ul>
+    </div>
+    
+    <script>
+        
+       var title = document.getElementById("title");
+        GetData = () => {
+            fetch('https://jsonplaceholder.typicode.com/todos/1')
+                .then(response => response.json())
+                .then(json => title.append(JSON.stringify(json)))
+        }
+        
+    </script>
+</body>
+</html>
