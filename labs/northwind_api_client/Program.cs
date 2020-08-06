@@ -18,35 +18,56 @@ namespace northwind_api_client
         static void Main(string[] args)
         {
             //async get all Customers
-            Thread.Sleep(10000);
+            Thread.Sleep(7000);
 
             //async get one Customer
 
             GetOneCustomer("ALFKI");
 
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
 
             Console.WriteLine($"I got the fist customer, Name: {customer.ContactName}");
 
             //Post a customer
-            var newCustomer = new Customer()
-            {
-                CustomerId = "NEW04",
-                ContactName = "Bruno",
-                CompanyName = "My Comapny",
-                City = "London",
-                Country = "UK",
+            //var newCustomer = new Customer()
+            //{
+            //    CustomerId = "NEW04",
+            //    ContactName = "Bruno",
+            //    CompanyName = "My Comapny",
+            //    City = "London",
+            //    Country = "UK",
 
-            };
+            //};
             GetAllCustomers();
             Thread.Sleep(2000);
 
-            PostCustomerAsync(newCustomer);
+            //PostCustomerAsync(newCustomer);
             Thread.Sleep(2000);
 
             Console.WriteLine($"customer list count is {customers.Count}");
+
+            //update
+
+
+            //delete
+            DeleteCustomer("NEW02");
         }
 
+        static void DeleteCustomer(string customerId)
+        {
+            if (GetCustomer(customerId))
+            {
+                using (var httpClient = new HttpClient())
+                {
+                    var data = httpClient.DeleteAsync(customerUrl + $"/{customerId}");
+                    Console.WriteLine($"Delete was successful: {data.Result.IsSuccessStatusCode}");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Customer {customerId} does not exist");
+            }
+        }
         static async void PostCustomerAsync(Customer newCustomer)
         {
             //check if does not exist
