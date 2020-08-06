@@ -97,31 +97,19 @@ namespace premierLeagueApi
     {
         static Uri todosUrl = new Uri("https://jsonplaceholder.typicode.com/todos");
 
-        static Uri premierLeagueUrl = new Uri("http://api.football-data.org/v2/competitions/2021/standings");
+       
 
         static List<Todo> todos = new List<Todo>();
         static List<Todo> todosAsync = new List<Todo>();
+
+        static Uri premierLeagueUrl = new Uri("http://api.football-data.org/v2/competitions/2021/standings");
+
         public List<Team> premierLeagueTeams = new List<Team>();
+
         public Root premierLeague;
         static void Main(string[] args)
         {
-            //Sync
-            //GetTodos();
 
-            //Console.WriteLine($"Synchronously we have obtained {todos.Count} records");
-
-            ////Async
-            //var s = new Stopwatch();
-            //s.Start();
-            //GetTodosAsync();
-
-            //Console.WriteLine($"Asynchronously we have obtained {todosAsync.Count} records at {s.ElapsedMilliseconds}");
-
-            //Thread.Sleep(2000);
-            //Console.WriteLine($"Asynchronously we have obtained {todosAsync.Count} records at {s.ElapsedMilliseconds}");
-            //s.Stop();
-            
-           
         }
 
         public void GetTeams()
