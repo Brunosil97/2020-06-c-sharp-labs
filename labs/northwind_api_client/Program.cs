@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace northwind_api_client
 {
     class Program
     {
+       
+
         static List<Customer> customers = new List<Customer>();
         static Customer customer = new Customer();
 
@@ -37,7 +40,7 @@ namespace northwind_api_client
             //Post a customer
             var newCustomer = new Customer()
             {
-                CustomerId = "NEW04",
+                CustomerId = $"NEW05",
                 ContactName = "Bruno",
                 CompanyName = "My Comapny",
                 City = "London",
@@ -78,6 +81,23 @@ namespace northwind_api_client
             //var response = await DeleteCustomerAsync2("NEW04");
         }
 
+        static string RandomId()
+        {
+            int length = 5;
+            char letter;
+
+             Random random = new Random();
+             StringBuilder str_build = new StringBuilder();
+
+            for(int i = 0; i <= length; i++)
+            {
+                double flt = random.NextDouble();
+                int shift = Convert.ToInt32(Math.Floor(25 * flt));
+                letter = Convert.ToChar(shift + 65);
+                str_build.Append(letter);
+            }
+            return str_build.ToString();
+        }
         static async void UpdateCustomerAsync(Customer customer)
         {          
             string customerJson = JsonConvert.SerializeObject(customer);
