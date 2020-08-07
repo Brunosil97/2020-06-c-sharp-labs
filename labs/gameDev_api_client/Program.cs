@@ -62,7 +62,15 @@ namespace gameDev_api_client
             GetOneDeveloper(1).Wait();
             Console.WriteLine($"This developer name is {developer.DevName}");
 
+            //Developer newDev = new Developer()
+            //{
+            //    DevName = "346",
+            //    DevDescription = "Microsoft Halo developers"
+            //};
 
+            //AddNewDeveloper(newDev).Wait();
+
+            DeleteDeveloper(2).Wait();
 
         }
 
@@ -85,6 +93,30 @@ namespace gameDev_api_client
 
                 developer = JsonConvert.DeserializeObject<Developer>(data);
                 return developer;
+            }
+        }
+
+        static async Task AddNewDeveloper(Developer developer)
+        {
+            string newDevJson = JsonConvert.SerializeObject(developer);
+            var httpContent = new StringContent(newDevJson);
+
+            httpContent.Headers.ContentType.MediaType = "application/json";
+            httpContent.Headers.ContentType.CharSet = "UTF-8";
+
+            using(var httpClient = new HttpClient())
+            {
+                var httpResponse = await httpClient.PostAsync(devsUrl, httpContent);
+                Console.WriteLine($"Update was successful: {httpResponse.IsSuccessStatusCode}");
+            }
+        }
+
+        static async Task DeleteDeveloper(int devId)
+        {
+            using(var httpClient = new HttpClient())
+            {
+                var data = await httpClient.DeleteAsync($"{devsUrl}/{devId}");
+                Console.WriteLine($"Delete was successful: {data.IsSuccessStatusCode}");
             }
         }
         static async void GetAllGames()
