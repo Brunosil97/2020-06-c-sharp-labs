@@ -77,11 +77,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_37_http_deserilize", "l
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_38_wpf_api", "lab_38_wpf_api\lab_38_wpf_api.csproj", "{E4A6418F-FC2A-4A1B-B977-A772295CD42A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_39_api_hw", "lab_39_api_hw\lab_39_api_hw.csproj", "{81F7E5D3-9BE9-42BF-9500-C5D4BB1EEFB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gameDev_api", "lab_39_api_hw\gameDev_api.csproj", "{81F7E5D3-9BE9-42BF-9500-C5D4BB1EEFB7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "northwind_entity-core", "northwind_entity-core\northwind_entity-core.csproj", "{33138E3D-CF23-4775-951F-D036323924F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "northwind_api_client", "northwind_api_client\northwind_api_client.csproj", "{D8E70C9C-09FF-4E44-933F-1C59ABA24BD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "northwind_api_client", "northwind_api_client\northwind_api_client.csproj", "{D8E70C9C-09FF-4E44-933F-1C59ABA24BD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gameDev_api_client", "gameDev_api_client\gameDev_api_client.csproj", "{DEB0382E-703B-4995-9960-912A19398683}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -249,6 +251,10 @@ Global
 		{D8E70C9C-09FF-4E44-933F-1C59ABA24BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8E70C9C-09FF-4E44-933F-1C59ABA24BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8E70C9C-09FF-4E44-933F-1C59ABA24BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB0382E-703B-4995-9960-912A19398683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB0382E-703B-4995-9960-912A19398683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB0382E-703B-4995-9960-912A19398683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB0382E-703B-4995-9960-912A19398683}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
