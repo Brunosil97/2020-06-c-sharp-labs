@@ -40,7 +40,7 @@ namespace northwind_api_client
             //Post a customer
             var newCustomer = new Customer()
             {
-                CustomerId = $"NEW05",
+                CustomerId = RandomId(),
                 ContactName = "Bruno",
                 CompanyName = "My Comapny",
                 City = "London",
