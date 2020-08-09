@@ -24,7 +24,7 @@ namespace gameDev_api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Developer>>> GetDeveloper()
         {
-            return await _context.Developer.ToListAsync();
+            return await _context.Developer.Include("Games").ToListAsync();
         }
 
         // GET: api/Developers/5
