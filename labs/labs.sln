@@ -91,7 +91,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_39_api_code_first", "la
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_40_entity_code_first", "lab_40_entity_code_first\lab_40_entity_code_first.csproj", "{DCE8F7A0-8D0D-4D3D-B227-0417355BDD18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_41_xml", "lab_41_xml\lab_41_xml.csproj", "{ECFD8F30-2074-4076-86A5-D265BFEF18B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_41_xml", "lab_41_xml\lab_41_xml.csproj", "{ECFD8F30-2074-4076-86A5-D265BFEF18B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_42_xml_serilize", "lab_42_xml_serilize\lab_42_xml_serilize.csproj", "{A96ABC86-CD14-49F7-960C-B9943DC8DCD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -279,6 +281,10 @@ Global
 		{ECFD8F30-2074-4076-86A5-D265BFEF18B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECFD8F30-2074-4076-86A5-D265BFEF18B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECFD8F30-2074-4076-86A5-D265BFEF18B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A96ABC86-CD14-49F7-960C-B9943DC8DCD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A96ABC86-CD14-49F7-960C-B9943DC8DCD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A96ABC86-CD14-49F7-960C-B9943DC8DCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A96ABC86-CD14-49F7-960C-B9943DC8DCD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
