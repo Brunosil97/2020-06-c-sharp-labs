@@ -1,6 +1,6 @@
 using System;
 
-namespace lab_39_api_hw
+namespace lab_39_api_code_first
 {
     public class WeatherForecast
     {

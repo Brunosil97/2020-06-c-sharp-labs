@@ -4,23 +4,23 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:49796",
-      "sslPort": 44300
+      "applicationUrl": "http://localhost:50229",
+      "sslPort": 44364
     }
   },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/Games",
+      "launchUrl": "weatherforecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "lab_39_api_hw": {
+    "lab_39_api_code_first": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Games",
+      "launchUrl": "weatherforecast",
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

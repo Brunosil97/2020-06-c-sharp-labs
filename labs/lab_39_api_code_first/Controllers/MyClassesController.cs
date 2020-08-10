@@ -5,54 +5,54 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using gameDev_api.Models;
+using lab_39_api_code_first.Models;
 
-namespace gameDev_api.Controllers
+namespace lab_39_api_code_first.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GamesController : ControllerBase
+    public class MyClassesController : ControllerBase
     {
-        private readonly GamesContext _context;
+        private readonly MyDbContext _context;
 
-        public GamesController(GamesContext context)
+        public MyClassesController(MyDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Games
+        // GET: api/MyClasses
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Games>>> GetGames()
+        public async Task<ActionResult<IEnumerable<MyClass>>> GetMyClasses()
         {
-            return await _context.Games.ToListAsync();
+            return await _context.MyClasses.ToListAsync();
         }
 
-        // GET: api/Games/5
+        // GET: api/MyClasses/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Games>> GetGames(int id)
+        public async Task<ActionResult<MyClass>> GetMyClass(int id)
         {
-            var games = await _context.Games.FindAsync(id);
+            var myClass = await _context.MyClasses.FindAsync(id);
 
-            if (games == null)
+            if (myClass == null)
             {
                 return NotFound();
             }
 
-            return games;
+            return myClass;
         }
 
-        // PUT: api/Games/5
+        // PUT: api/MyClasses/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutGames(int id, Games games)
+        public async Task<IActionResult> PutMyClass(int id, MyClass myClass)
         {
-            if (id != games.GameId)
+            if (id != myClass.MyClassId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(games).State = EntityState.Modified;
+            _context.Entry(myClass).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +60,7 @@ namespace gameDev_api.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!GamesExists(id))
+                if (!MyClassExists(id))
                 {
                     return NotFound();
                 }
@@ -73,37 +73,37 @@ namespace gameDev_api.Controllers
             return NoContent();
         }
 
-        // POST: api/Games
+        // POST: api/MyClasses
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Games>> PostGames(Games games)
+        public async Task<ActionResult<MyClass>> PostMyClass(MyClass myClass)
         {
-            _context.Games.Add(games);
+            _context.MyClasses.Add(myClass);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetGames", new { id = games.GameId }, games);
+            return CreatedAtAction("GetMyClass", new { id = myClass.MyClassId }, myClass);
         }
 
-        // DELETE: api/Games/5
+        // DELETE: api/MyClasses/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Games>> DeleteGames(int id)
+        public async Task<ActionResult<MyClass>> DeleteMyClass(int id)
         {
-            var games = await _context.Games.FindAsync(id);
-            if (games == null)
+            var myClass = await _context.MyClasses.FindAsync(id);
+            if (myClass == null)
             {
                 return NotFound();
             }
 
-            _context.Games.Remove(games);
+            _context.MyClasses.Remove(myClass);
             await _context.SaveChangesAsync();
 
-            return games;
+            return myClass;
         }
 
-        private bool GamesExists(int id)
+        private bool MyClassExists(int id)
         {
-            return _context.Games.Any(e => e.GameId == id);
+            return _context.MyClasses.Any(e => e.MyClassId == id);
         }
     }
 }
