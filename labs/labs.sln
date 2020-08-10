@@ -87,9 +87,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gameDev_api_client", "gameD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gameDev_api_wpf", "gameDev_api_wpf\gameDev_api_wpf.csproj", "{1C7FF1B8-45D3-42A8-A652-6E4C5366FE2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_39_api_code_first", "lab_39_api_code_first\lab_39_api_code_first.csproj", "{B4131BD8-37BF-401D-AFD8-22864AC7B31D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_39_api_code_first", "lab_39_api_code_first\lab_39_api_code_first.csproj", "{B4131BD8-37BF-401D-AFD8-22864AC7B31D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_40_entity_code_first", "lab_40_entity_code_first\lab_40_entity_code_first.csproj", "{DCE8F7A0-8D0D-4D3D-B227-0417355BDD18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_40_entity_code_first", "lab_40_entity_code_first\lab_40_entity_code_first.csproj", "{DCE8F7A0-8D0D-4D3D-B227-0417355BDD18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_41_xml", "lab_41_xml\lab_41_xml.csproj", "{ECFD8F30-2074-4076-86A5-D265BFEF18B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -273,6 +275,10 @@ Global
 		{DCE8F7A0-8D0D-4D3D-B227-0417355BDD18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCE8F7A0-8D0D-4D3D-B227-0417355BDD18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCE8F7A0-8D0D-4D3D-B227-0417355BDD18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECFD8F30-2074-4076-86A5-D265BFEF18B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECFD8F30-2074-4076-86A5-D265BFEF18B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECFD8F30-2074-4076-86A5-D265BFEF18B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECFD8F30-2074-4076-86A5-D265BFEF18B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
