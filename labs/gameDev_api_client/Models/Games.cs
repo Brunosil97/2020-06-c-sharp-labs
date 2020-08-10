@@ -12,5 +12,10 @@ namespace gameDev_api_client.Models
         public int? DevId { get; set; }
 
         public virtual Developer Dev { get; set; }
+
+        public override string ToString()
+        {
+            return $"{GameName}: {GameDescription}";
+        }
     }
 }

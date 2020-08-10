@@ -16,5 +16,12 @@ namespace gameDev_api_client.Models
         public string DevDescription { get; set; }
 
         public virtual ICollection<Games> Games { get; set; }
+
+        public override string ToString()
+        {
+            return $"{DevName}: {DevDescription}";
+        }
     }
+
+    
 }
