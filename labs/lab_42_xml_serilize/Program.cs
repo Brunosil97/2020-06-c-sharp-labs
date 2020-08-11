@@ -44,14 +44,14 @@ namespace lab_42_xml_serilize
 
             //assume data being sent to us over the internet
             //safest to stream
-            var xmlProducts2 = new Products();
+            //var xmlProducts2 = new Products();
 
-            using(var reader = new StreamReader("Products.xml"))
-            {
-                //deserilize from xml into northwind products
-                var serializer = new XmlSerializer(typeof(Products));
-                xmlProducts2 = (Products)serializer.Deserialize(reader);
-            };
+            //using(var reader = new StreamReader("Products.xml"))
+            //{
+            //    //deserilize from xml into northwind products
+            //    var serializer = new XmlSerializer(typeof(Products));
+            //    xmlProducts2 = (Products)serializer.Deserialize(reader);
+            //};
         }
     }
 
@@ -60,5 +60,15 @@ namespace lab_42_xml_serilize
     {
         [XmlElement("Product")]
         public List<Product> XMLProductsFromBrazil { get; set; }
+
+        [XmlElement("ProductID")]
+        public int ProductId { get; set; }
+
+        [XmlElement("ProductName")]
+        public string ProductName { get; set; }
+
+        [XmlElement("UnitPrice")]
+        public int UnitPrice { get; set; }
+
     }
 }

@@ -93,7 +93,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_40_entity_code_first", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_41_xml", "lab_41_xml\lab_41_xml.csproj", "{ECFD8F30-2074-4076-86A5-D265BFEF18B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_42_xml_serilize", "lab_42_xml_serilize\lab_42_xml_serilize.csproj", "{A96ABC86-CD14-49F7-960C-B9943DC8DCD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_42_xml_serilize", "lab_42_xml_serilize\lab_42_xml_serilize.csproj", "{A96ABC86-CD14-49F7-960C-B9943DC8DCD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code_first_hw", "Code_first_hw\Code_first_hw.csproj", "{48559B3E-7842-41CD-B119-7AC5A507C74A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -285,6 +287,10 @@ Global
 		{A96ABC86-CD14-49F7-960C-B9943DC8DCD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A96ABC86-CD14-49F7-960C-B9943DC8DCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A96ABC86-CD14-49F7-960C-B9943DC8DCD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48559B3E-7842-41CD-B119-7AC5A507C74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48559B3E-7842-41CD-B119-7AC5A507C74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48559B3E-7842-41CD-B119-7AC5A507C74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48559B3E-7842-41CD-B119-7AC5A507C74A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
