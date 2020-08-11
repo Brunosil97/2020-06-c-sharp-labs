@@ -18,7 +18,7 @@ namespace lab_42_xml_serilize
             List<Product> products = new List<Product>();
 
             //read some northwind products
-            using(var db = new NorthwindContext())
+            using (var db = new NorthwindContext())
             {
                 products = db.Products.Take(5).ToList();
             }
@@ -44,31 +44,16 @@ namespace lab_42_xml_serilize
 
             //assume data being sent to us over the internet
             //safest to stream
-            //var xmlProducts2 = new Products();
 
-            //using(var reader = new StreamReader("Products.xml"))
-            //{
-            //    //deserilize from xml into northwind products
-            //    var serializer = new XmlSerializer(typeof(Products));
-            //    xmlProducts2 = (Products)serializer.Deserialize(reader);
-            //};
+            var XMLProducts = new Products();
+            using (var reader = new StreamReader("Products.xml"))
+            {
+                // deserialize from xml to Northwind Products
+                var serializer = new XmlSerializer(typeof(Products));
+                XMLProducts = (Products)serializer.Deserialize(reader);
+            }
+            Console.WriteLine("\n\nProducts Deserialized");
+            XMLProducts.ProductList.ForEach(p => Console.WriteLine($"{p.ProductId,-15}{p.ProductName,-40}{p.UnitPrice}"));
         }
-    }
-
-    [XmlRoot("Products")]
-    public class Products
-    {
-        [XmlElement("Product")]
-        public List<Product> XMLProductsFromBrazil { get; set; }
-
-        [XmlElement("ProductID")]
-        public int ProductId { get; set; }
-
-        [XmlElement("ProductName")]
-        public string ProductName { get; set; }
-
-        [XmlElement("UnitPrice")]
-        public int UnitPrice { get; set; }
-
     }
 }
