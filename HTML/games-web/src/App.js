@@ -33,9 +33,9 @@ class App extends React.Component {
   }
 
   filteredGames = () => {
-    const filter = this.state.search ? this.state.gamesArray.includes((game) => {
-      game.name.includes(this.state.search)
-    }) : this.state.gamesArray;
+    const filter = this.state.search 
+    ? this.state.gamesArray.filter((game) => game.name.includes(this.state.search)) 
+    : this.state.gamesArray;
 
     return filter;
   }
@@ -50,7 +50,10 @@ class App extends React.Component {
         <SearchBar onChangeSearch={this.onChangeSearch}/>
         <br/>
         
-        <GameList games={this.filteredGames()}/>
+        {this.state.gamesArray ? (
+          <GameList games={this.filteredGames()}/>
+        ) : null}
+        
       
       
       </Container>
