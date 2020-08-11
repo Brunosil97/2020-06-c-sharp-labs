@@ -42,3 +42,7 @@ Head
 - Controller - Handles requests, fetches data, sends everything to view
   
 ## Javascript
+
+## Shortcuts
+- Control right/left 
+- Shift
