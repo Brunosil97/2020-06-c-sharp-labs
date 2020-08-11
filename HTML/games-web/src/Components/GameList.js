@@ -1,17 +1,15 @@
 import React from 'react'
 import GameCard from '../Containers/GameCard'
+import {Card} from 'semantic-ui-react';
 
-const HogList = ({games}) => {
-
-    
+const GameList = ({games}) => {
     return (
-        <div>
-           
+        <Card.Group>
             {games.map(game => (
                 <GameCard game={game} key={game.name}/>
             ))}
-        </div>
+        </Card.Group>
     )
 }
 
-export default HogList
+export default GameList

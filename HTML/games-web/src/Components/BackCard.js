@@ -1,9 +1,10 @@
 import React from 'react';
+import {Card} from 'semantic-ui-react';
 
 const BackCard = ({game}) => {
 
     return (
-        <div className="ui card eight wide coloumn gameTile">
+        <Card classNmae="gameTile">
             <h3>{game.name}</h3>
             <img className="gameImg" src={game.imageUrl}></img>
             <div className = "backCard">
@@ -11,7 +12,7 @@ const BackCard = ({game}) => {
                 <p>Rating: {game.rating}</p>
             </div>
 
-        </div>
+        </Card>
     )
 }
 

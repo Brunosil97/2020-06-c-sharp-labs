@@ -1,4 +1,4 @@
-.gameTile {
+/* .gameTile {
   display: inline;
   background-repeat: no-repeat;
   background-position: center 90%;
@@ -8,14 +8,14 @@
   outline: #3B0B0B dotted thick;
   transition: 0.75s;
   opacity: 1;
-}
+} */
 
 .gameTile:hover {
   transform: scale(1.05);
 }
 
 .gameImg {
-  width: 350px;
+  width: 290px;
   height: 350px;
 }
 
