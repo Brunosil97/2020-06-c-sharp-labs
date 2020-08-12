@@ -1,0 +1,23 @@
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.gameTile:hover {
+  transform: scale(1.05);
+}
+
+.gameTile {
+  display: inline;
+}
+
+.gameImg {
+  width: 290px;
+  height: 350px;
+}
+
+.pageTitle {
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
