@@ -9,6 +9,7 @@ class GameForm extends React.Component {
         this.state = {
             nameBox: '',
             descriptionBox: '',
+            consoleBox: '',
             ratingBox: 0,
             imageUrlBox: ''
         }
@@ -24,6 +25,9 @@ class GameForm extends React.Component {
             case 'description':
                 this.setState({descriptionBox: value})
                 break;
+            case 'console':
+                this.setState({consoleBox: value})
+                break;
             case 'rating':
                 this.setState({ratingBox: parseInt(value)})
                 break;
@@ -34,8 +38,13 @@ class GameForm extends React.Component {
         }
     }
 
+    
+
     handleSubmit = (event) => {
-        let {nameBox, descriptionBox, ratingBox, imageUrlBox} = this.state
+        event.preventDefault();
+        const form = document.querySelector("form");
+
+        let {nameBox, descriptionBox, consoleBox, ratingBox, imageUrlBox} = this.state
         fetch("https://localhost:44318/api/Games", {
             method: 'POST',
             headers: {
@@ -46,22 +55,24 @@ class GameForm extends React.Component {
                 name: nameBox,
                 rating: ratingBox,
                 description: descriptionBox,
+                console: consoleBox,
                 imageUrl: imageUrlBox
             })
         })
         .then(res => res.json())
-        .then(res => console.log(res))
         .then(game => this.props.addGame(game))
+        .then(form.reset());
     }
 
     render() {
         return (
             <div className="addForm">
                 <h3>Add A New Game</h3>
-                <Form onSubmit={this.handleSubmit}>
+                <Form className="form" onSubmit={this.handleSubmit}>
                     <Form.Group widths="equal">
                         <Form.Input fluid label="Name" placeholder="Name" name="name" onChange={this.handleChange}></Form.Input>
                         <Form.Input fluid label="Description" placeholder="Description" name="description" onChange={this.handleChange}></Form.Input>
+                        <Form.Input fluid label="Console" placeholder="Console" name="console" onChange={this.handleChange}></Form.Input>
                         <Form.Input fluid label="Rating" type="number" step="1" placeholder="Rating" name="rating" onChange={this.handleChange}></Form.Input>
                         <Form.Input fluid label="Image Url" placeholder="Image Url" name="imageUrl" onChange={this.handleChange}></Form.Input>
                         <Form.Button>Submit</Form.Button>

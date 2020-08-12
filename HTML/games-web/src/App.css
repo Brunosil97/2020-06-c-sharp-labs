@@ -9,11 +9,26 @@
 
 .gameTile {
   display: inline;
+  margin: 10px;
+}
+
+.ui.card.gameTile {
+  margin: 10px;
+  margin-bottom: 10px;
+}
+.gamesListBox {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
 .gameImg {
   width: 290px;
   height: 350px;
+}
+
+.ui.card {
+  margin: 10px;
 }
 
 .pageTitle {

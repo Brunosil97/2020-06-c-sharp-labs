@@ -2,6 +2,7 @@ import React from 'react';
 import GameList from './Components/GameList'
 import GameForm from './Containers/GameForm'
 import SearchBar from './Components/SearchBar'
+import UpdateGame from './Containers/UpdateGame'
 import {Container} from 'semantic-ui-react'
 import './App.css';
 
@@ -11,6 +12,8 @@ class App extends React.Component {
     super()
     this.state = {
       gamesArray : [],
+      selectedGame: [],
+      editGame: false,
       search: ''
     }
   }
@@ -40,22 +43,32 @@ class App extends React.Component {
     return filter;
   }
 
+  handleEditChange = () => {
+    this.setState({editGame: !this.state.editGame})
+  }
+
+  UpdateStateToEditGame = (game) => {
+    this.setState({
+      selectedGame: game,
+      editGame: !this.state.editGame
+    })
+  }
+
   render() {
     return(
       <Container>
-        
         <h1 className="pageTitle">Game Collector</h1>
         <GameForm addGame={this.addGame}/>
         <br/>
         <SearchBar onChangeSearch={this.onChangeSearch}/>
         <br/>
         
-        {this.state.gamesArray ? (
-          <GameList games={this.filteredGames()}/>
-        ) : null}
+        {this.state.editGame ? <UpdateGame game={this.state.selectedGame} editGame ={this.handleEditChange}/>
+        : null}
+
         
-      
-      
+        <GameList  games={this.filteredGames()}  UpdateStateToEditGame={this.UpdateStateToEditGame}/>
+        
       </Container>
     )
   }
