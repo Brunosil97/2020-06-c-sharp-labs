@@ -14,15 +14,45 @@ class UpdateGame extends React.Component {
     }
 
     UpdatedGameInState = (event) => {
-        this.setState({
-            [event.target.name] : event.target.value
+        if(event.target.name == "rating") {
+            this.setState({
+                rating: parseInt(event.target.value)
+            })
+        } else {
+            this.setState({
+                [event.target.name] : event.target.value
+            })
+        }
+    }
+
+    EditGameSubmit = (event) => {
+        const {name, description, console, rating, imageUrl} = this.state;
+        const baseUrl = "https://localhost:44318/api/Games"
+        
+        let selectedGame = {
+            gameId: parseInt(this.props.game.gameId),
+            name: name,
+            description: description,
+            console: console,
+            rating: rating,
+            imageUrl: imageUrl
+        }
+        fetch(`${baseUrl}/${this.props.game.gameId}`, {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(selectedGame)
         })
+        this.props.editGame();
+        this.props.getAllGames();
     }
 
     render() {
         const {name, description, console, rating, imageUrl, errors} = this.state;
         return (
-            <Modal as={Form} open={true} onClose={() => this.props.editGame()} closeIcon>
+            <Modal as={Form} open={true} onSubmit={this.EditGameSubmit} onClose={() => this.props.editGame()} closeIcon>
                 <Header icon='archive' content="Update Game" size="tiny"/>
                 <Modal.Content>
                 <div className="Errors">

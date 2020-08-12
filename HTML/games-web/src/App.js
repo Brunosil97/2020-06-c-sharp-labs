@@ -19,10 +19,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+   this.GetAllGames(); 
+  }
+
+  GetAllGames = () => {
     fetch("https://localhost:44318/api/Games")
     .then(res => res.json())
     .then(gameJson => this.setState({ gamesArray: gameJson}))
-    
   }
 
   addGame = (game) => {
@@ -63,7 +66,7 @@ class App extends React.Component {
         <SearchBar onChangeSearch={this.onChangeSearch}/>
         <br/>
         
-        {this.state.editGame ? <UpdateGame game={this.state.selectedGame} editGame ={this.handleEditChange}/>
+        {this.state.editGame ? <UpdateGame game={this.state.selectedGame} getAllGames={this.GetAllGames} editGame ={this.handleEditChange}/>
         : null}
 
         
