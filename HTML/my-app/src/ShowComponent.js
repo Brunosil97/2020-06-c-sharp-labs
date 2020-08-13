@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const ShowComponent = (props) => {
 
     return (
-        <div>
-                  <h1>I'm no longer invisible!</h1>
-        </div>
+        <h1>Im visibile!!!</h1>
     )
 }
 

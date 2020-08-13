@@ -1,6 +1,7 @@
 import React from 'react';
-import PropComponent from './PropComponent'
-import ShowComponent from './ShowComponent';
+import ChildComponent from './ChildComponent'
+import ShowComponent from './ShowComponent'
+import MapComponent from './MapComponent'
 
 class LikeComponent extends React.Component {
 
@@ -8,15 +9,23 @@ class LikeComponent extends React.Component {
         super()
         this.state = {
             likes: 0,
-            showComponent: false,
-            pokemons: []
+            isShown: false,
+            users: []
         }
     }
 
+    //1. fetch from api of your choosing and store into state
+    //2. Render a function component that MAPS through all the passed down array of objects
+    //3. For each mapped item in the array, render a component and pass down that item
+    //3. In component for specific item, display its content
+
+    // 1 component to handle the array and map
+    // For each mapped item in array, render a component file
+
     componentDidMount() {
-        fetch("https://pokeapi.co/api/v2/pokemon?limit=20")
-        .then(res => res.json())
-        .then(pokemons => this.setState({pokemons}))
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(response => response.json())
+            .then(usersJson => this.setState({users: usersJson}))
     }
 
     incrementLikeCount = () => {
@@ -27,25 +36,25 @@ class LikeComponent extends React.Component {
 
     handleShowChange = () => {
         this.setState({
-            showComponent: !this.state.showComponent
+            isShown: !this.state.isShown
         })
     }
 
     render() {
-        const {likes, showComponent} = this.state;
         return (
             <main>
                 <div>
-                    <h1>Hello World</h1>
-                    <h1>Number of Likes {likes}</h1>
-                    <PropComponent incrementLikeCount={this.incrementLikeCount}/>
-                    <br/>
-                <button onClick={() => this.handleShowChange()}>Click me</button>
+                    <h1>This is the amount of likes: {this.state.likes}</h1>
+                    <ChildComponent incrementLikeCount={this.incrementLikeCount} />
 
-                {showComponent 
-                ? <ShowComponent /> 
-                : <h3>Hidden</h3>
-            }
+                    <button onClick={() => this.handleShowChange()}>Show Me!</button>
+
+                    { this.state.isShown ? <ShowComponent /> : null }
+                </div>
+
+                <div>
+                    <h1>All Users:</h1>
+                    <MapComponent allUsers={this.state.users}/>
                 </div>
             </main>
         )
