@@ -1,19 +1,23 @@
 import React from 'react';
 import {Card} from 'semantic-ui-react';
+import {Delete, Icon} from '@material-ui/core/Icon';
+import DeleteIcon from '@material-ui/icons/Delete';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import Button from '@material-ui/core/Button';
 
 const BackCard = ({game, UpdateStateToEditGame, deleteGame}) => {
 
     return (
-        <Card className="gameTile">
+        <Card className="gameTileBack">
             <h3>{game.name}</h3>
-            <img className="gameImg" src={game.imageUrl}></img>
+            {/* <img className="gameImg" src={game.imageUrl}></img> */}
             <div className = "backCard">
-                <p>Description: {game.description}</p>
-                <p>Rating: {game.rating}</p>
+                <p>Description:<br/> {game.description}</p>
+                <p>Rating:  {game.rating}</p>
             </div>
-            <div>
-                <button onClick={() => deleteGame(game.gameId)}>Delete</button>
-                <button onClick={() => UpdateStateToEditGame(game)}>Update</button>
+            <div className="cardButtons">
+                <Button color="secondary" variant="contained" startIcon={<DeleteIcon/>} onClick={() => deleteGame(game.gameId)}>Delete</Button>
+                <Button color="default"  variant="contained" startIcon={<CloudUploadIcon/>} onClick={() => UpdateStateToEditGame(game)}>Update</Button>
             </div>
         </Card>
     )

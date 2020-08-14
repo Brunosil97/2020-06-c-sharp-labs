@@ -12,6 +12,12 @@
   margin: 10px;
 }
 
+.gameTileBack {
+  display: inline;
+  margin: 10px;
+  height: 200px
+}
+
 .ui.card.gameTile {
   margin: 10px;
   margin-bottom: 10px;
@@ -20,6 +26,11 @@
   display: flex;
   justify-content: center;
   margin: 10px;
+}
+
+.gameTileBack h3 {
+  display: flex;
+  justify-content: center;
 }
 
 .gamesListBox div {
@@ -63,4 +74,11 @@ transform: scale(2.5);
 #psLogo:hover {
 transition: all .5s ease-in-out;
 transform: scale(2.5);
+}
+
+.cardButtons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px
 }
