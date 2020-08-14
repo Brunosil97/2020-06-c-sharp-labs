@@ -37,6 +37,14 @@
   margin: 5px;
 }
 
+.backCard {
+  background-color: rgb(169,169,169);
+}
+
+.cardButtons {
+  background-color: rgb(169,169,169);
+}
+
 .gameImg {
   width: 290px;
   height: 350px;

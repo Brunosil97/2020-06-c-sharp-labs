@@ -8,10 +8,11 @@ import Button from '@material-ui/core/Button';
 const BackCard = ({game, UpdateStateToEditGame, deleteGame}) => {
 
     return (
-        <Card className="gameTileBack">
-            <h3>{game.name}</h3>
+        <Card className="gameTileBack" >
+            
             {/* <img className="gameImg" src={game.imageUrl}></img> */}
             <div className = "backCard">
+                <h3>{game.name}</h3>
                 <p>Description:<br/> {game.description}</p>
                 <p>Rating:  {game.rating}</p>
             </div>

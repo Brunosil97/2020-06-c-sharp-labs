@@ -1,7 +1,7 @@
 import React from 'react';
 import GameList from './Components/GameList'
 import GameForm from './Containers/GameForm'
-import SearchBar from './Components/SearchBar'
+import SearchAndFilter from './Components/SearchAndFilter'
 import UpdateGame from './Containers/UpdateGame'
 import {Container} from 'semantic-ui-react'
 import './App.css';
@@ -14,7 +14,8 @@ class App extends React.Component {
       gamesArray : [],
       selectedGame: [],
       editGame: false,
-      search: ''
+      search: '',
+      filter: "None"
     }
   }
 
@@ -40,8 +41,8 @@ class App extends React.Component {
 
   filteredGames = () => {
     const filter = this.state.search 
-    ? this.state.gamesArray.filter((game) => game.name.includes(this.state.search)) 
-    : this.state.gamesArray;
+    ? this.consoleFilter().filter((game) => game.name.includes(this.state.search)) 
+    : this.consoleFilter();
 
     return filter;
   }
@@ -69,13 +70,27 @@ class App extends React.Component {
     .then(res => res.json())
   }
 
+  setFilterType = (type) => {
+    this.setState({
+      filter: type
+    })
+  }
+
+  consoleFilter = () => {
+    if(this.state.filter === "None") {
+      return this.state.gamesArray
+    } else {
+      return this.state.gamesArray.filter(g => g.console === this.state.filter)
+    }
+  }
+
   render() {
     return(
       <Container>
         <h1 className="pageTitle">Game Collector</h1>
         <GameForm addGame={this.addGame}/>
         <br/>
-        <SearchBar onChangeSearch={this.onChangeSearch}/>
+        <SearchAndFilter onChangeSearch={this.onChangeSearch} filter={this.state.filter} setFilterType={this.setFilterType}/>
         <br/>
         
         {this.state.editGame ? <UpdateGame game={this.state.selectedGame} getAllGames={this.GetAllGames} editGame ={this.handleEditChange}/>
