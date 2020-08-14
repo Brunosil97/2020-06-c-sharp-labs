@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card} from 'semantic-ui-react';
 
-const BackCard = ({game, UpdateStateToEditGame}) => {
+const BackCard = ({game, UpdateStateToEditGame, deleteGame}) => {
 
     return (
         <Card className="gameTile">
@@ -12,7 +12,7 @@ const BackCard = ({game, UpdateStateToEditGame}) => {
                 <p>Rating: {game.rating}</p>
             </div>
             <div>
-                <button>Delete</button>
+                <button onClick={() => deleteGame(game.gameId)}>Delete</button>
                 <button onClick={() => UpdateStateToEditGame(game)}>Update</button>
             </div>
         </Card>

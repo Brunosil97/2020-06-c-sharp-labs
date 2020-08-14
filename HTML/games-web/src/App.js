@@ -57,6 +57,18 @@ class App extends React.Component {
     })
   }
 
+  DeleteGame = (gameId) => {
+    const baseUrl = "https://localhost:44318/api/Games"
+    fetch(`${baseUrl}/${gameId}`, {
+      method: 'DELETE',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type' : 'application/json'
+      }
+    })
+    .then(res => res.json())
+  }
+
   render() {
     return(
       <Container>
@@ -70,7 +82,7 @@ class App extends React.Component {
         : null}
 
         
-        <GameList  games={this.filteredGames()}  UpdateStateToEditGame={this.UpdateStateToEditGame}/>
+        <GameList games={this.filteredGames()} UpdateStateToEditGame={this.UpdateStateToEditGame} deleteGame={this.DeleteGame}/>
         
       </Container>
     )

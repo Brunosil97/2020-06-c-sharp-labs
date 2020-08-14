@@ -14,9 +14,10 @@ class GameCard extends React.Component {
     }
 
     render() {
+        const { game, UpdateStateToEditGame, deleteGame} = this.props;
         return (
             <div onClick={this.handleClick}>
-                {this.state.clicked ? <BackCard game={this.props.game} UpdateStateToEditGame={this.props.UpdateStateToEditGame}/> 
+                {this.state.clicked ? <BackCard game={game} UpdateStateToEditGame={UpdateStateToEditGame} deleteGame={deleteGame}/> 
                 : <FrontCard game={this.props.game}/>
             }
             </div>
