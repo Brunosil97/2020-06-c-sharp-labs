@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Array</title>
+    <div id="listContainer">
+    </div>
+    <input id="input"></input>
+    <button id="button">Add to Array</button>
+</head>
+<body>
+    <script>
+        let numbers = [1,2,3,4,5];
+
+        listContainer = document.getElementById("listContainer")
+        //numList = document.getElementById("numList");
+        
+        button = document.getElementById("button")
+
+        listContainer.innerText = numbers;
+
+        const updateArray = () => {
+            input = document.getElementById("input");
+            numbers.push(input.value);
+            listContainer.innerText = numbers;
+            input.value = ""
+        }
+        button.addEventListener('click', updateArray);
+
+        
+    </script>
+</body>
+</html>
