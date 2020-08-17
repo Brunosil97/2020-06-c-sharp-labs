@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Divs On Click</title>
+    <div>
+        <h1>Div Container</h1>
+        <div width="200px" height="200px"  id="divContainer">
+        </div>
+        <button id="addBtn">Click me to add div</button>
+    </div>
+</head>
+<body>
+    <script>
+        let colours = ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 'black'];
+
+        divContainer = document.getElementById("divContainer");
+        button = document.getElementById("addBtn")
+
+        let uniqId;
+
+        const addDiv = () => {
+            uniqId = Date.now();
+
+            const div = document.createElement("div");
+            div.style.backgroundColor = colours[Math.floor(Math.random() * colours.length)]
+            div.id = uniqId;
+            div.style.width = "100px";
+            div.style.height = "100px";
+            div.style.display = 'inline-block'
+
+            divContainer.appendChild(div);
+        }
+
+        const removeElement = (id) => {
+            const element = document.getElementById('divContainer');
+
+            element.removeChild(element.childNodes[0])
+        }
+        
+        button.addEventListener("click", addDiv);
+
+        divContainer.addEventListener('click', removeElement);
+        
+
+    </script>
+</body>
+</html>
