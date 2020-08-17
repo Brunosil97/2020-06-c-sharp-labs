@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Hover Change</title>
+    <h1>Change colour on Hover</h1>
+    <div 
+    id="divContainer">
+        <div style= " width:100px; height:100px; display:inline-block; background-color:black;" id="colourDiv">
+
+        </div>
+
+    </div>
+</head>
+<body>
+    <script>
+        let colours = ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 'black'];
+
+        colourDiv = document.getElementById("colourDiv");
+
+        const changeColour = () => {
+            colourDiv.style.width='200px'
+            colourDiv.style.backgroundColor = colours[Math.floor(Math.random() * colours.length)]
+        }
+
+        colourDiv.addEventListener('mouseover', changeColour);
+
+    </script>
+    
+</body>
+</html>
