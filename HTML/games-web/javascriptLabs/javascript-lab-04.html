@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Shapes</title>
+    <h1>Circle Canvas</h1>
+    <canvas id="circleCanvas" width="200" height="200" style="border: 1px solid #000000;"></canvas>
+    <h1>Triangle Canvas</h1>
+    <canvas id="triangleCanvas" width="200" height="200" style="border: 1px solid #000000;"></canvas>
+    <h1>Rectangle Canvas</h1>
+    <canvas id="rectangleCanvas" width="200" height="200" style="border: 1px solid #000000;"></canvas>
+
+</head>
+<body>
+    <script>
+        circleCanvas = document.getElementById("circleCanvas")
+        const ctx = circleCanvas.getContext("2d");
+        ctx.beginPath();
+
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        rectangleCanvas = document.getElementById("rectangleCanvas");
+        const rtx = rectangleCanvas.getContext("2d");
+        rtx.beginPath();
+
+        rtx.rect(20,20,150,100);
+        rtx.stroke();
+
+        triangleCanvas = document.getElementById("triangleCanvas");
+        const ttx = triangleCanvas.getContext("2d");
+        ttx.beginPath();
+        ttx.MoveTo(125, 125);
+        ttx.lineTo(125, 45);
+        ttx.lineTo(45, 125);
+        ttx.closePath();
+        ttx.stroke();
+    </script>
+</body>
+</html>
