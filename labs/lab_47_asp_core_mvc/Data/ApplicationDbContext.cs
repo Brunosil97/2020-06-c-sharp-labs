@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using lab_47_asp_core_mvc.Models;
 
 namespace lab_47_asp_core_mvc.Data
 {
@@ -12,5 +13,6 @@ namespace lab_47_asp_core_mvc.Data
             : base(options)
         {
         }
+        public DbSet<lab_47_asp_core_mvc.Models.College> College { get; set; }
     }
 }
