@@ -1,0 +1,14 @@
+﻿@page
+@model lab_46_asp_core_games.Pages.TodosModel
+@{
+}
+
+<h1>Todos:</h1>
+
+<script>
+    const gettodos = () => {
+        fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response => response.json())
+            .then(todos => { return todos })
+    }
+</script>
