@@ -118,6 +118,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_46_asp_core_games", "la
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_47_asp_core_mvc", "lab_47_asp_core_mvc\lab_47_asp_core_mvc.csproj", "{097D5642-8A06-4B8C-BB5F-93D17B0CC84E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_48_todo_app", "lab_48_todo_app\lab_48_todo_app.csproj", "{23E80FE1-956B-41A5-BA24-A5C96E54B5D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -344,6 +346,10 @@ Global
 		{097D5642-8A06-4B8C-BB5F-93D17B0CC84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{097D5642-8A06-4B8C-BB5F-93D17B0CC84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{097D5642-8A06-4B8C-BB5F-93D17B0CC84E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E80FE1-956B-41A5-BA24-A5C96E54B5D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E80FE1-956B-41A5-BA24-A5C96E54B5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E80FE1-956B-41A5-BA24-A5C96E54B5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E80FE1-956B-41A5-BA24-A5C96E54B5D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,12 +3,22 @@
 @{
 }
 
-<h1>Todos:</h1>
+@using Microsoft.AspNetCore.Components
+@using Microsoft.JSInterop;
+@inject IJSRuntime JSRuntime
 
-<script>
-    const gettodos = () => {
-        fetch('https://jsonplaceholder.typicode.com/todos')
-            .then(response => response.json())
-            .then(todos => { return todos })
-    }
-</script>
+
+<h1>Users:</h1>
+
+<div id="userContainer">
+    <ul id="nameList">
+        
+    </ul>
+</div>
+
+<button onclick="getUsers()">Get Users</button>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+  
+
+
