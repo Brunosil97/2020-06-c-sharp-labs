@@ -11,60 +11,48 @@ namespace lab_48_todo_app.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TodoesController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly TodoDbContext _context;
 
-        public TodoesController(TodoDbContext context)
+        public UsersController(TodoDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Todoes
+        // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Todo>>> GetTodos()
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            //Custom view model - change type
-
-            //var returnedObj =
-            //    (from todo in _context.Todos
-            //     select new DisplayTodoWithUserName()
-            //     {
-            //         id = todo.TodoId,
-            //         item = todo.ToDoName,
-            //         username = todo.User.UserName
-            //     }).ToListAsync();
-            //return await returnedObj;
-
-          return await _context.Todos.Include(todo => todo.User).ToListAsync();
+            return await _context.Users.ToListAsync();
         }
 
-        // GET: api/Todoes/5
+        // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Todo>> GetTodo(int id)
+        public async Task<ActionResult<User>> GetUser(int id)
         {
-            var todo = await _context.Todos.FindAsync(id);
+            var user = await _context.Users.FindAsync(id);
 
-            if (todo == null)
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return todo;
+            return user;
         }
 
-        // PUT: api/Todoes/5
+        // PUT: api/Users/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTodo(int id, Todo todo)
+        public async Task<IActionResult> PutUser(int id, User user)
         {
-            if (id != todo.TodoId)
+            if (id != user.UserId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(todo).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
 
             try
             {
@@ -72,7 +60,7 @@ namespace lab_48_todo_app.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TodoExists(id))
+                if (!UserExists(id))
                 {
                     return NotFound();
                 }
@@ -85,37 +73,37 @@ namespace lab_48_todo_app.Controllers
             return NoContent();
         }
 
-        // POST: api/Todoes
+        // POST: api/Users
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Todo>> PostTodo(Todo todo)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
-            _context.Todos.Add(todo);
+            _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTodo", new { id = todo.TodoId }, todo);
+            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
         }
 
-        // DELETE: api/Todoes/5
+        // DELETE: api/Users/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Todo>> DeleteTodo(int id)
+        public async Task<ActionResult<User>> DeleteUser(int id)
         {
-            var todo = await _context.Todos.FindAsync(id);
-            if (todo == null)
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            _context.Todos.Remove(todo);
+            _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
-            return todo;
+            return user;
         }
 
-        private bool TodoExists(int id)
+        private bool UserExists(int id)
         {
-            return _context.Todos.Any(e => e.TodoId == id);
+            return _context.Users.Any(e => e.UserId == id);
         }
     }
 }
