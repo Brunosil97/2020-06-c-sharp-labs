@@ -25,7 +25,9 @@ namespace lab_45_asp_demo_2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Northwind")));
+            //services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Northwind
+            services.AddDbContext<NorthwindContext>(options => options.UseSqlServer("Data Source=bsilva-sql-server-sparta.database.windows.net;Initial Catalog=bsilva_sparta_trial_db;User ID=sqlserveradmin;Password=Pa$$wordPa$$word;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
+
             services.AddRazorPages();
         }
 
