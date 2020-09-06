@@ -1,18 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace TechInterviewQuestions
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Tech Interview!");
 
             Console.WriteLine("Quick Fire: 1");
-            //FizzBuzz(100);
+            FizzBuzz(100);
 
             Console.WriteLine("Quick Fire: 2");
             Loops(300);
+
+            Console.WriteLine("Sum Input primes:");
+            PrimeFactor primeFactor = new PrimeFactor();
+            Console.WriteLine(primeFactor.SumPrimeInputNumbers());
         }
 
         static void FizzBuzz(int number)
@@ -59,6 +65,29 @@ namespace TechInterviewQuestions
                 Console.WriteLine(i);
             }
 
+        }
+    }
+
+    public class PrimeFactor
+    {
+        public int SumPrimeInputNumbers()
+        {
+            var primeArr = new List<int>();
+
+            Console.Write("Please enter a number\n");
+            int number = Int32.Parse(Console.ReadLine());
+
+            for(int i = 2; i < number; i++)
+            {
+                if(number % i == 0) 
+                {
+                    primeArr.Add(i);
+                    number = number / i;
+
+                };
+            }
+
+            return primeArr.Sum();
         }
     }
 }
