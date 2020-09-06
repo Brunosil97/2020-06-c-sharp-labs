@@ -18,7 +18,9 @@ namespace TechInterviewQuestions
 
             Console.WriteLine("Sum Input primes:");
             PrimeFactor primeFactor = new PrimeFactor();
-            Console.WriteLine(primeFactor.SumPrimeInputNumbers());
+            Console.WriteLine(primeFactor.SumPrimeInputNumbers(10));
+            Console.WriteLine(primeFactor.SumPrimeInputNumbers(15));
+            Console.WriteLine(primeFactor.SumPrimeInputNumbers(60));
         }
 
         static void FizzBuzz(int number)
@@ -70,13 +72,13 @@ namespace TechInterviewQuestions
 
     public class PrimeFactor
     {
-        public int SumPrimeInputNumbers()
+        public int SumPrimeInputNumbers(int num)
         {
             var primeArr = new List<int>();
 
             Console.Write("Please enter a number\n");
-            int number = Int32.Parse(Console.ReadLine());
-
+            //int number = Int32.Parse(Console.ReadLine());
+            int number = num;
             for(int i = 2; i < number; i++)
             {
                 if(number % i == 0) 
@@ -89,5 +91,7 @@ namespace TechInterviewQuestions
 
             return primeArr.Sum();
         }
+
+        
     }
 }
