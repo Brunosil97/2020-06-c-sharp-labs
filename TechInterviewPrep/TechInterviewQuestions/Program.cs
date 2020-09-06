@@ -8,6 +8,8 @@ namespace TechInterviewQuestions
     {
         static void Main(string[] args)
         {
+            PrimeFactor primeFactor = new PrimeFactor();
+
             Console.WriteLine("Tech Interview!");
 
             Console.WriteLine("Quick Fire: 1");
@@ -17,10 +19,12 @@ namespace TechInterviewQuestions
             Loops(300);
 
             Console.WriteLine("Sum Input primes:");
-            PrimeFactor primeFactor = new PrimeFactor();
             Console.WriteLine(primeFactor.SumPrimeInputNumbers(10));
-            Console.WriteLine(primeFactor.SumPrimeInputNumbers(15));
-            Console.WriteLine(primeFactor.SumPrimeInputNumbers(60));
+
+            Console.WriteLine("Input array loops:");
+            int[] array1 = new int[] { 10, 11, 15 };
+
+            Console.WriteLine(primeFactor.TotalOfArrayAfterLoops(array1));
         }
 
         static void FizzBuzz(int number)
@@ -92,6 +96,37 @@ namespace TechInterviewQuestions
             return primeArr.Sum();
         }
 
-        
+        public int TotalOfArrayAfterLoops(int[] inputArr)
+        {
+ 
+            int counter = 0;
+
+            while (counter < inputArr.Length)
+            {
+                inputArr[counter] = inputArr[counter] + 1;
+                counter++;
+            }
+
+            int doCounter = 0;
+
+            do
+            {
+                inputArr[doCounter] = inputArr[doCounter] + 3;
+                doCounter++;
+            }
+            while (doCounter < inputArr.Length);
+
+            for (int i = 0; i < inputArr.Length; i++)
+            {
+                inputArr[i] = inputArr[i] * 2;
+            }
+
+            return inputArr.Sum();
+        }
+
+        public int Multiply(int num1, int num2)
+        {
+            return num1 * num2;
+        }
     }
 }

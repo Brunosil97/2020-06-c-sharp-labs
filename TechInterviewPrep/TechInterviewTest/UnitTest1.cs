@@ -22,5 +22,16 @@ namespace TechInterviewTest
             var result = _primeFactor.SumPrimeInputNumbers(number);
             Assert.AreEqual(expectedResult, result);
         }
+
+        [Test]
+        public void CheckIfAllLoopsSum()
+        {
+            int[] array = new int[] { 10, 11, 15 };
+            var _primeFactor = new PrimeFactor();
+
+            var result = _primeFactor.TotalOfArrayAfterLoops(array);
+
+            Assert.AreEqual(96, result);
+        }
     }
 }
