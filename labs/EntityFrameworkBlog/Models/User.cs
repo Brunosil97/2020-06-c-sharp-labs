@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
-namespace lab_48_todo_app.Models
+namespace EntityFrameworkBlog.Models
 {
     public class User
     {
         public User()
         {
-            Todos = new HashSet<Todo>();
+            Todos = new HashSet<ToDo>();
         }
+        [Key]
         public int UserId { get; set; }
         public string UserName { get; set; }
-        public virtual ICollection<Todo> Todos { get; set; }
-
+        public virtual ICollection<ToDo> Todos { get; set; }
     }
 }
-
